@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../css/stylesContacto.css" />
+  </head>
+
+  <body>
+    <div id="divPrincipal">
+      <div class="h1"><h1>Contacto</h1></div>
+      <div id="form">
+        <form id="formInterno">
+          <p class="inputs">
+            <label style="width: 90px">Nombre</label>
+            <input type="text" name="nombre" placeholder="Ingrese nombre" />
+          </p>
+          <p class="inputs">
+            <label style="width: 90px">Email</label>
+            <input type="email" name="mail" placeholder="Ingrese mail" />
+          </p>
+          <p class="inputs">
+            <label>Tema</label>
+            <select name="Select" placeholder="select">
+              <option name="1" value="Venta">Venta</option>
+              <option name="2" value="Trabajo">Trabajo</option>
+              <option name="3" value="Reparación">Reparación</option>
+              <option name="4" value="Otros">Otros</option>
+            </select>
+          </p>
+          <p class="inputs">
+            <label>Mensaje</label>
+            <textarea
+              name="mensaje"
+              id="mensaje"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </p>
+          <p id="boton">
+            <button>Enviar</button>
+          </p>
+        </form>
+      </div>
+
+      <div class="h1"><h1>Mapa</h1></div>
+      <div id="mapa">
+        <iframe
+          id="mapaInterno"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.5123538346106!2d-58.450057884356866!3d-34.5912035643438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5f12e398ecd%3A0x98abf435fbfab70!2sAv.%20Corrientes%206237%2C%20C1427BPA%20CABA!5e0!3m2!1ses!2sar!4v1634684191030!5m2!1ses!2sar"
+          width="500"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>
