@@ -1,0 +1,156 @@
+
+
+/*GLOBALES*/
+
+html{
+    box-sizing: border-box;
+}
+:root {
+    --color1: #212c65;
+    --color2: #01A1DD;
+    --color3: #000000;
+
+
+    --fuenteHeading: 'Raleway', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #212c65, #01A1DD)
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* HEADER */
+header{
+    font-family: var(--fuenteHeading);
+   width: 100%;
+   background: var(--color1);
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+   overflow: hidden;
+   
+}
+
+.contenedor-logo{
+    display: flex;
+    justify-content: flex-start;
+    
+}
+.logo{
+    margin-top: 20px;
+    color: white;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.enlaces{
+    color: var(--color2);
+    padding: 10px 20px;
+    font-weight: bold;
+    max-width: 100%;
+    display: inline-block;
+    transition: all 500ms ease;
+
+}
+.enlaces:hover {
+    background: var(--color2);
+    border-radius: 30px;
+    color: var(--color1);
+}
+
+
+/* MAIN CONTENT*/
+
+.slides{
+    width: 800px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-top: 20px;
+    border: 3px outset var(--color2);
+}
+
+.contenedor-imagenes {
+    display: flex;
+    justify-content: center;
+}
+
+.parrafo1{
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 40px;
+    margin-right: 20px;
+    line-height: 20px;
+    font-family: var(--fuenteHeading);
+}
+
+/*PRODUCTOS*/
+.title-1{
+    margin: 20px;
+    font-family: var(--fuenteHeading);
+    text-decoration: underline;
+    color: white;
+}
+
+.producto {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.producto__imagen{
+    width: 400px;
+    height: 300px;
+    margin: 20px;
+    border: 3px solid var(--color2);
+    border-radius: 10px;
+    box-shadow: 5px 3px var(--color1);
+}
+
+.producto__informacion{
+    font-family: var(--fuenteHeading);
+    margin: 20px;
+    color: var(--color3);
+}
+
+.producto__nombre{
+    text-decoration: underline;
+    color: white;
+}
+
+.inlist{
+    line-height: 25px;
+}
+
+.boton{
+    display: inline-block;
+    font-family: var(--fuenteHeading);
+    padding: 10px 20px;
+    background-color: var(--color2);
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    box-shadow: 3px 2px black;
+}
+.boton:hover{
+    cursor: pointer;
+}
+.vector{
+    margin-bottom: -5px;
+    margin-left: 5px;
+}
