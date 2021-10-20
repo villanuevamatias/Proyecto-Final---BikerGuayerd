@@ -1,3 +1,9 @@
+:root {
+  --color1: #212c65;
+  --color2: #01a1dd;
+  --color3: #000000;
+}
+
 body {
   margin: 0px;
 }
@@ -36,4 +42,36 @@ body {
 }
 
 label {
+  display: inline-block;
+  width: 50px;
+}
+
+select {
+  display: inline-block;
+  width: 200px;
+  margin: auto;
+}
+
+.inputs {
+  display: inline-block;
+  width: 200px;
+}
+
+#botonEnviar {
+  display: inline-block;
+  font-family: var(--fuenteHeading);
+  padding: 10px 20px;
+  background-color: var(--color2);
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  box-shadow: 3px 2px black;
+  transition: all 500ms ease;
+}
+
+#botonEnviar:hover {
+  cursor: pointer;
+  background: var(--color1);
+  border-radius: 30px;
+  color: white;
 }
