@@ -1,0 +1,39 @@
+body {
+  margin: 0px;
+}
+
+.h1 {
+  margin-left: 30px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+#form {
+  background-color: #c7c8c4;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border: solid;
+  border-color: #a6341b;
+}
+
+#formInterno {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mapaInterno {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+label {
+}
