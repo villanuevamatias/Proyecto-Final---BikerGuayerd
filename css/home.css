@@ -1,0 +1,60 @@
+body {
+  margin: 0%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+#estilo {
+  background: linear-gradient(90deg, #212c65, #01a1dd);
+}
+#cuerpo {
+  margin: 2%;
+}
+#portada {
+  width: 100%;
+}
+#tabla {
+  margin: 150px auto;
+  width: 65%;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+th,
+td {
+  padding: 17px;
+}
+thead {
+  background-color: #212c65;
+  color: white;
+  border-bottom: solid 5px darkblue;
+}
+tr:nth-child(even) {
+  background-color: #01a1dd;
+}
+h1 {
+  text-align: center;
+  color: white;
+}
+.desplegable {
+  width: 95%;
+  max-width: 120em;
+  padding: 2em;
+}
+.desplegable .contenedor {
+  margin: 0 0 1em;
+  padding: 1em;
+}
+.desplegable .h2 {
+  margin: 0 0 1em;
+  padding: 1em;
+}
+.desplegable .contenido {
+  background-color: wheat;
+  height: 0;
+  padding: 0em;
+  overflow: hidden;
+}
+.desplegable .contenedor.activo .contenido {
+  height: auto;
+}
