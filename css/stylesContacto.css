@@ -2,7 +2,7 @@
   --color1: #212c65;
   --color2: #01a1dd;
   --color3: #000000;
-  --fuenteHeading: 'Raleway', sans-serif;
+  --fuenteHeading: "Raleway", sans-serif;
 }
 
 body {
@@ -12,30 +12,28 @@ body {
 /* ---HEADER---*/
 
 /* HEADER */
-.estilo{
+.estilo {
   background: linear-gradient(90deg, #212c65, #01a1dd);
 }
 
-header{
+header {
   font-family: var(--fuenteHeading);
- width: 100%;
- background: var(--color1);
+  width: 100%;
+  background: var(--color1);
 }
 
-.contenedor{
+.contenedor {
   width: 90%;
   max-width: 1200px;
   margin: auto;
- overflow: hidden;
- 
+  overflow: hidden;
 }
 
-.contenedor-logo{
+.contenedor-logo {
   display: flex;
   justify-content: flex-start;
-  
 }
-.logo{
+.logo {
   margin-top: 20px;
   color: white;
   font-size: 30px;
@@ -47,7 +45,7 @@ header{
   justify-content: flex-end;
 }
 
-.enlaces{
+.enlaces {
   color: var(--color2);
   font-size: 20px;
   padding: 10px 20px;
@@ -55,19 +53,18 @@ header{
   max-width: 100%;
   display: inline-block;
   transition: all 500ms ease;
-
 }
 .enlaces:hover {
   background: var(--color2);
   border-radius: 30px;
   color: var(--color1);
 }
-.relleno{
+.relleno {
   display: block;
   border: 3px solid var(--color2);
   border-radius: 5px;
-} 
-.imgLogo{
+}
+.imgLogo {
   width: 15%;
   margin-top: 10px;
 }
@@ -80,7 +77,7 @@ header{
 }
 
 #form {
-  background-image:url(../images/background\ \ contactos.jpg);
+  background-image: url(../images/background\ \ contactos.jpg);
   width: 30%;
   display: flex;
   flex-direction: column;
@@ -89,7 +86,7 @@ header{
   margin-right: auto;
   padding: 20px;
   border: solid;
-  border-color:var(--color1);
+  border-color: var(--color1);
   border-radius: 5px 30px;
   box-shadow: 3px 3px 3px rgb(197, 194, 194);
 }
@@ -107,18 +104,6 @@ header{
   margin-right: auto;
   margin-left: auto;
 }
-
-label {
-  display: inline-block;
-  width: 50px;
-}
-
-select {
-  display: inline-block;
-  width: 200px;
-  margin: auto;
-}
-
 
 #botonEnviar {
   display: inline-block;
@@ -143,24 +128,23 @@ select {
 .vectores {
   margin-top: 10px;
 }
-.footerContent{
+.footerContent {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 20px;
-  font-size:larger;
+  font-size: larger;
   font-family: var(--fuenteHeading);
 }
 label {
   display: inline-block;
- width: 100px;
- margin: 0%;
+  width: 100px;
+  margin: 0%;
 }
-select{
+select {
   display: inline-block;
   margin: 0%;
   width: 300px;
   height: 40px;
-
 }
 input {
   display: inline-flex;
@@ -169,22 +153,21 @@ input {
   margin: 0%;
   margin-left: 10px;
 }
-#iconWsp{
-  position:fixed;
+#iconWsp {
+  position: fixed;
   bottom: 30px;
   right: 30px;
   z-index: 998;
-  display: flex; 
-  width:110px; 
-
+  display: flex;
+  width: 110px;
 }
-#globo{
+#globo {
   position: fixed;
-   bottom: 90px;
+  bottom: 90px;
   right: 100px;
   z-index: 999;
 
-  display:none; 
-  width:100px; 
-  margin-left: 80%; 
+  display: none;
+  width: 100px;
+  margin-left: 80%;
 }
