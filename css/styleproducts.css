@@ -1,203 +1,194 @@
-
-
 /*GLOBALES*/
 
-html{
-    box-sizing: border-box;
+html {
+  box-sizing: border-box;
 }
 :root {
-    --color1: #212c65;
-    --color2: #01A1DD;
-    --color3: #000000;
-    --color4: #ffffff;
+  --color1: #212c65;
+  --color2: #01a1dd;
+  --color3: #000000;
+  --color4: #ffffff;
 
-
-    --fuenteHeading: 'Raleway', sans-serif;
+  --fuenteHeading: "Raleway", sans-serif;
 }
-body{
-    margin: 0;
-    padding: 0;
-}
-
-.estilo{
-    background: linear-gradient(90deg, #212c65, #01a1dd);
+body {
+  margin: 0;
+  padding: 0;
 }
 
-a{
-    text-decoration: none;
+.estilo {
+  background: linear-gradient(90deg, #212c65, #01a1dd);
 }
 
+a {
+  text-decoration: none;
+}
 
 /* HEADER */
-header{
-    font-family: var(--fuenteHeading);
-   width: 100%;
-   background: var(--color1);
+header {
+  font-family: var(--fuenteHeading);
+  width: 100%;
+  background: var(--color1);
+  position: sticky;
+  top: -120px;
 }
 
-.contenedor{
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-   overflow: hidden;
-   
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
 }
 
-.contenedor-logo{
-    display: flex;
-    justify-content: flex-start;
-    
+.contenedor-logo {
+  display: flex;
+  justify-content: flex-start;
 }
-.logo{
-    margin-top: 20px;
-    color: white;
-    font-size: 30px;
-    line-height: 50px;
+.logo {
+  margin-top: 20px;
+  color: white;
+  font-size: 30px;
+  line-height: 50px;
 }
 
 .navegacion {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.enlaces{
-    color: var(--color2);
-    font-size: 20px;
-    padding: 10px 20px;
-    font-weight: bold;
-    max-width: 100%;
-    display: inline-block;
-    transition: all 500ms ease;
-
+.enlaces {
+  color: var(--color2);
+  font-size: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  max-width: 100%;
+  display: inline-block;
+  transition: all 500ms ease;
 }
 .enlaces:hover {
-    background: var(--color2);
-    border-radius: 30px;
-    color: var(--color1);
+  background: var(--color2);
+  border-radius: 30px;
+  color: var(--color1);
 }
-.relleno{
-    display: block;
-    border: 3px solid var(--color2);
-    border-radius: 5px;
-  } 
-.imgLogo{
-    width: 15%;
-    margin-top: 10px;
+.relleno {
+  display: block;
+  border: 3px solid var(--color2);
+  border-radius: 5px;
+}
+.imgLogo {
+  width: 15%;
+  margin-top: 10px;
 }
 
 /* MAIN CONTENT*/
 
-.slides{
-    width: 800px;
-    height: 400px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
-    border-radius: 30px;
-    margin-top: 20px;
-    border: 3px outset var(--color2);
+.slides {
+  width: 800px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 30px;
+  margin-top: 20px;
+  border: 3px outset var(--color2);
 }
 
 .contenedor-imagenes {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-.parrafo1{
-    text-align: left;
-    margin-left: 20px;
-    margin-top: 40px;
-    margin-right: 20px;
-    line-height: 20px;
-    font-family: var(--fuenteHeading);
+.parrafo1 {
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 40px;
+  margin-right: 20px;
+  line-height: 20px;
+  font-family: var(--fuenteHeading);
 }
 
 /*PRODUCTOS*/
-.title-1{
-    margin-left: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-family: var(--fuenteHeading);
-    text-decoration: underline;
-    color: white;
+.title-1 {
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: var(--fuenteHeading);
+  text-decoration: underline;
+  color: white;
 }
 
 .producto {
-    display: flex;
-    flex-direction: row;
-    border: 1px solid var(--color1);
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-
+  display: flex;
+  flex-direction: row;
+  border: 1px solid var(--color1);
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-.producto__imagen{
-    width: 400px;
-    height: 300px;
-    margin: 20px;
-    border: 3px solid var(--color2);
-    border-radius: 10px;
-    box-shadow: 5px 3px var(--color1);
+.producto__imagen {
+  width: 400px;
+  height: 300px;
+  margin: 20px;
+  border: 3px solid var(--color2);
+  border-radius: 10px;
+  box-shadow: 5px 3px var(--color1);
 }
 
-.image-1{
-    margin-top: 40px;
+.image-1 {
+  margin-top: 40px;
 }
 
-.image-2{
-    margin-top: 40px;
+.image-2 {
+  margin-top: 40px;
 }
-.image-3{
-    margin-top: 40px;
-}
-
-.producto__informacion{
-    font-family: var(--fuenteHeading);
-    margin: 20px;
-    color: var(--color3);
+.image-3 {
+  margin-top: 40px;
 }
 
-.producto__nombre{
-    text-decoration: underline;
-    color: white;
+.producto__informacion {
+  font-family: var(--fuenteHeading);
+  margin: 20px;
+  color: var(--color3);
+}
+
+.producto__nombre {
+  text-decoration: underline;
+  color: white;
 }
 .precio {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-.inlist{
-    line-height: 25px;
+.inlist {
+  line-height: 25px;
 }
-.botondiv{
-    display: flex;
-    justify-content: flex-end;
+.botondiv {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.boton{
-    font-family: var(--fuenteHeading);
-    padding: 10px 20px;
-    background-color: var(--color2);
-    border: none;
-    border-radius: 5px 15px;
-    font-size: 15px;
-    box-shadow: 3px 2px black;
+.boton {
+  font-family: var(--fuenteHeading);
+  padding: 10px 20px;
+  background-color: var(--color2);
+  border: none;
+  border-radius: 5px 15px;
+  font-size: 15px;
+  box-shadow: 3px 2px black;
 }
-.boton:hover{
-    cursor: pointer;
+.boton:hover {
+  cursor: pointer;
 }
-.vector{
-    margin-bottom: -5px;
-    margin-left: 5px;
+.vector {
+  margin-bottom: -5px;
+  margin-left: 5px;
 }
 
 /* FOOTER */
-.footerContent{
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
-    font-size:larger;
-    font-family: var(--fuenteHeading);
-  }
-
-
-  
+.footerContent {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  font-size: larger;
+  font-family: var(--fuenteHeading);
+}

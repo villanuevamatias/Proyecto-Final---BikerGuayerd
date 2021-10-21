@@ -4,11 +4,10 @@ html {
 
 :root {
   --color1: #212c65;
-  --color2: #01A1DD;
+  --color2: #01a1dd;
   --color3: #000000;
 
-
-  --fuenteHeading: 'Raleway', sans-serif;
+  --fuenteHeading: "Raleway", sans-serif;
 }
 
 body {
@@ -17,50 +16,49 @@ body {
   font-family: var(--fuenteHeading);
 }
 
-
-
 /* -----NAV-----*/
-header{
+header {
   font-family: var(--fuenteHeading);
- width: 100%;
- background: var(--color1);
+  width: 100%;
+  background: var(--color1);
+  position: sticky;
+  top: -120px;
 }
 
-.contenedorHeader{
+.contenedorHeader {
   width: 90%;
   max-width: 1200px;
   margin: auto;
- overflow: hidden;
- 
+  overflow: hidden;
+  position: sticky;
 }
 
-.contenedor-logo{
+.contenedor-logo {
   display: flex;
   justify-content: flex-start;
-  
 }
-.logo{
+.logo {
   margin-top: 20px;
   color: white;
   font-size: 30px;
   line-height: 50px;
 }
-.imgLogo{
+.imgLogo {
   width: 15%;
   margin-top: 10px;
 }
 
-.relleno{
+.relleno {
   display: block;
   border: 3px solid var(--color2);
   border-radius: 5px;
-} 
+}
 .navegacion {
   display: flex;
   justify-content: flex-end;
 }
 
-.enlaces{
+.enlaces {
   color: var(--color2);
   font-size: 20px;
   padding: 10px 20px;
@@ -69,7 +67,6 @@ header{
   display: inline-block;
   text-decoration: none;
   transition: all 500ms ease;
-
 }
 .enlaces:hover {
   background: var(--color2);
@@ -85,7 +82,7 @@ header{
 #cuerpo {
   margin: 2%;
 }
-.imgPortada{
+.imgPortada {
   display: flex;
   justify-content: center;
 }
@@ -154,9 +151,9 @@ h1 {
 }
 /* FOOTER */
 
-.footerContent{
+.footerContent {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 20px;
-  font-size:larger;
+  font-size: larger;
 }
