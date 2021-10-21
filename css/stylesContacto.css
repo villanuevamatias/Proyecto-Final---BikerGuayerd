@@ -80,7 +80,7 @@ header{
 }
 
 #form {
-  background-color: #c7c8c4;
+  background-image:url(../images/background\ \ contactos.jpg);
   width: 30%;
   display: flex;
   flex-direction: column;
@@ -117,10 +117,6 @@ select {
   margin: auto;
 }
 
-.inputs {
-  display: inline-block;
-  width: 200px;
-}
 
 #botonEnviar {
   display: inline-block;
@@ -151,4 +147,23 @@ select {
   margin-bottom: 20px;
   font-size:larger;
   font-family: var(--fuenteHeading);
+}
+label {
+  display: inline-block;
+ width: 100px;
+ margin: 0%;
+}
+select{
+  display: inline-block;
+  margin: 0%;
+  width: 300px;
+  height: 40px;
+
+}
+input {
+  display: inline-flex;
+  width: 290px;
+  height: 35px;
+  margin: 0%;
+  margin-left: 10px;
 }
