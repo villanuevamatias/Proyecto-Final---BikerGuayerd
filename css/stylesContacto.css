@@ -171,19 +171,17 @@ input {
   position:fixed;
   bottom: 30px;
   right: 30px;
-  z-index: 999;
+  z-index: 998;
   display: flex; 
   width:110px; 
-  margin-left:86% ;
-  margin-right:0px;
-  margin-top: 0%;
+
 }
 #globo{
   position: fixed;
+   bottom: 90px;
+  right: 100px;
+  z-index: 999;
+
   display:none; 
-  width:180px; 
+  width:100px; 
   margin-left: 80%; 
-  margin-right:0px; 
-  margin-top: 0%;
-  margin-bottom: 0%;
-}
