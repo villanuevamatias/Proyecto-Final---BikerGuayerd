@@ -75,7 +75,15 @@ header{
     border-radius: 30px;
     color: var(--color1);
 }
-
+.relleno{
+    display: block;
+    border: 3px solid var(--color2);
+    border-radius: 5px;
+  } 
+.imgLogo{
+    width: 15%;
+    margin-top: 10px;
+}
 
 /* MAIN CONTENT*/
 
@@ -154,7 +162,9 @@ header{
     text-decoration: underline;
     color: white;
 }
-
+.precio {
+    text-decoration: underline;
+}
 .inlist{
     line-height: 25px;
 }
@@ -168,7 +178,7 @@ header{
     padding: 10px 20px;
     background-color: var(--color2);
     border: none;
-    border-radius: 5px;
+    border-radius: 5px 15px;
     font-size: 15px;
     box-shadow: 3px 2px black;
 }
@@ -188,4 +198,6 @@ header{
     font-size:larger;
     font-family: var(--fuenteHeading);
   }
+
+
   

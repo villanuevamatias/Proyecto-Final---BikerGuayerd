@@ -16,6 +16,69 @@ body {
   padding: 0;
   font-family: var(--fuenteHeading);
 }
+
+
+
+/* -----NAV-----*/
+header{
+  font-family: var(--fuenteHeading);
+ width: 100%;
+ background: var(--color1);
+}
+
+.contenedor{
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+ overflow: hidden;
+ 
+}
+
+.contenedor-logo{
+  display: flex;
+  justify-content: flex-start;
+  
+}
+.logo{
+  margin-top: 20px;
+  color: white;
+  font-size: 30px;
+  line-height: 50px;
+}
+.imgLogo{
+  width: 15%;
+  margin-top: 10px;
+}
+
+.relleno{
+  display: block;
+  border: 3px solid var(--color2);
+  border-radius: 5px;
+} 
+.navegacion {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.enlaces{
+  color: var(--color2);
+  font-size: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  max-width: 100%;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 500ms ease;
+
+}
+.enlaces:hover {
+  background: var(--color2);
+  border-radius: 30px;
+  color: var(--color1);
+}
+
+/* ---FIN CODE NAV---*/
+
 #estilo {
   background: linear-gradient(90deg, #212c65, #01a1dd);
 }
@@ -27,10 +90,12 @@ body {
   justify-content: center;
 }
 #portada {
-  width: 80%;
   border-radius: 10px;
-  height: 450px;
-
+  height: auto;
+  width: auto;
+  max-width: 1000px;
+  max-height: 450px;
+  margin-top: 20px;
 }
 #tabla {
   margin: 150px auto;
@@ -87,6 +152,7 @@ h1 {
 .desplegable .contenedor.activo .contenido {
   height: auto;
 }
+/* FOOTER */
 
 .footerContent{
   display: flex;

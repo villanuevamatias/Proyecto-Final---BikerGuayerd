@@ -2,12 +2,77 @@
   --color1: #212c65;
   --color2: #01a1dd;
   --color3: #000000;
+  --fuenteHeading: 'Raleway', sans-serif;
 }
 
 body {
   margin: 0px;
+  font-family: var(--fuenteHeading);
+}
+/* ---HEADER---*/
+
+/* HEADER */
+.estilo{
+  background: linear-gradient(90deg, #212c65, #01a1dd);
 }
 
+header{
+  font-family: var(--fuenteHeading);
+ width: 100%;
+ background: var(--color1);
+}
+
+.contenedor{
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+ overflow: hidden;
+ 
+}
+
+.contenedor-logo{
+  display: flex;
+  justify-content: flex-start;
+  
+}
+.logo{
+  margin-top: 20px;
+  color: white;
+  font-size: 30px;
+  line-height: 50px;
+}
+
+.navegacion {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.enlaces{
+  color: var(--color2);
+  font-size: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  max-width: 100%;
+  display: inline-block;
+  transition: all 500ms ease;
+
+}
+.enlaces:hover {
+  background: var(--color2);
+  border-radius: 30px;
+  color: var(--color1);
+}
+.relleno{
+  display: block;
+  border: 3px solid var(--color2);
+  border-radius: 5px;
+} 
+.imgLogo{
+  width: 15%;
+  margin-top: 10px;
+}
+
+/* ---FINHEADER--*/
 .h1 {
   margin-left: 30px;
   margin-top: 70px;
@@ -74,4 +139,16 @@ select {
   background: var(--color1);
   border-radius: 30px;
   color: white;
+}
+
+/*--FOOTER--*/
+.vectores {
+  margin-top: 10px;
+}
+.footerContent{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  font-size:larger;
+  font-family: var(--fuenteHeading);
 }
