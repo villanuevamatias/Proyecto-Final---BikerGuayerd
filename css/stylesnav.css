@@ -1,3 +1,17 @@
+html {
+    box-sizing: border-box;
+}
+:root {
+    --color1: #212c65;
+    --color2: #01A1DD;
+    --color3: #000000;
+
+
+    --fuenteHeading: 'Raleway', sans-serif;
+}
+body{
+    font-family: var(--fuenteHeading);
+}
 
 .container {
    justify-content: right;
@@ -10,7 +24,6 @@
 #header {
     margin:auto;
     width:500px;
-    font-family:  sans-serif;
     justify-content: right;
 }
 
@@ -37,7 +50,7 @@ ul, ol {
 }
 
 .nav li ul {
-    border: radius 1px;cm;
+    border: radius 1px;
     display:none;
     position:absolute;
     min-width:140px;
