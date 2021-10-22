@@ -177,7 +177,7 @@ h1 {
   overflow: hidden;
   /* display: none; */
   max-height: 0;
-  transition: max-height 50ms ease-out;
+  transition: max-height 100ms ease-out;
 
 }
 .colapsable:after{
@@ -186,8 +186,12 @@ h1 {
   float: right;
   margin-left: 5px;
 }
-.active:after{
-  image-orientation: 90grad;
+.active img{
+  transform: rotate(100grad);
+}
+.colapsable img {
+  float: right;
+  transition: all 0.25s ease;
 }
 /* .desplegable .contenido {
   height: auto;
