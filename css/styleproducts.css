@@ -9,7 +9,7 @@ html {
   --color3: #000000;
   --color4: #ffffff;
 
-  --fuenteHeading: "Raleway", sans-serif;
+  --fuenteHeading: "PT Serif", serif;
 }
 body {
   margin: 0;
@@ -115,6 +115,7 @@ header {
   font-family: var(--fuenteHeading);
   text-decoration: underline;
   color: white;
+  font-weight: bold;
 }
 
 .producto {
@@ -124,6 +125,7 @@ header {
   margin-bottom: 20px;
   margin-left: 20px;
   margin-right: 20px;
+  font-family: var(--fuenteHeading);
 }
 
 .producto__imagen {
@@ -155,6 +157,7 @@ header {
 .producto__nombre {
   text-decoration: underline;
   color: white;
+  font-weight: bold;
 }
 .precio {
   text-decoration: underline;
