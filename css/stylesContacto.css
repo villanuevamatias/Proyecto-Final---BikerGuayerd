@@ -2,7 +2,7 @@
   --color1: #212c65;
   --color2: #01a1dd;
   --color3: #000000;
-  --fuenteHeading: "Raleway", sans-serif;
+  --fuenteHeading: "PT Serif", serif;
 }
 
 body {
@@ -80,6 +80,10 @@ a {
   margin-left: 30px;
   margin-top: 70px;
   margin-bottom: 50px;
+  font-weight: bold;
+  font-family: var(--fuenteHeading);
+  color: white;
+  text-shadow: 2px 2px grey;
 }
 
 #form {
