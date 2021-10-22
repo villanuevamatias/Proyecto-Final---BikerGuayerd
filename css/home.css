@@ -145,10 +145,11 @@ h1 {
   margin: 0 0 1em;
   padding: 1em;
   color: white;
+  transition: border-color 066s ease-out, font-size ease-out; 
 }
 .colapsable {
   background-color: var(--color1);
-  color: var(--color3);
+  color: white;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -159,19 +160,34 @@ h1 {
 
 }
 .active, .colapsable:hover{
-  background-color: var(--color2);
-  border-radius: 5px 30px;
+  font-size: 103%;
+  cursor: pointer;
+  transition: border-color 0.5s;
+  border-color: var(--color3);
 }
 
-.desplegable .contenido {
+.contenido {
+  border-radius: 10px 5px ;
   text-align: center;
-  margin-left: 10px;
-  margin-right: 10px;
-  background-color: rgb(219, 217, 211);
+  margin-left: 30px;
+  margin-right: 30px;
+  background-color: var(--color2);
   height: auto;
   font-size: small;
   overflow: hidden;
-  display: none;
+  /* display: none; */
+  max-height: 0;
+  transition: max-height 0.2ms ease-out;
+
+}
+.colapsable:after{
+  color: var(--color1);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.active:after{
+  image-orientation: 90grad;
 }
 /* .desplegable .contenido {
   height: auto;
