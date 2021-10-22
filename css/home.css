@@ -139,11 +139,28 @@ h1 {
   background-color: var(--color1);
   border-radius: 5px 30px;
   box-shadow: 3px 3px 3px rgb(197, 194, 194);
+  transition: max-height 0.2s ease-out;
 }
 .desplegable .h2 {
   margin: 0 0 1em;
   padding: 1em;
   color: white;
+}
+.colapsable {
+  background-color: var(--color1);
+  color: var(--color3);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+
+}
+.active, .colapsable:hover{
+  background-color: var(--color2);
+  border-radius: 5px 30px;
 }
 
 .desplegable .contenido {
@@ -151,13 +168,14 @@ h1 {
   margin-left: 10px;
   margin-right: 10px;
   background-color: rgb(219, 217, 211);
-  height: 0;
+  height: auto;
   font-size: small;
   overflow: hidden;
+  display: none;
 }
-.desplegable .contenedor.activo .contenido {
+/* .desplegable .contenido {
   height: auto;
-}
+} */
 /* FOOTER */
 
 .footerContent {
