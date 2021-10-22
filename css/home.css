@@ -7,7 +7,7 @@ html {
   --color2: #01a1dd;
   --color3: #000000;
 
-  --fuenteHeading: "PT Serif", serif;
+  --fuenteHeading: "Raleway", sans-serif;
 }
 
 body {
@@ -23,10 +23,6 @@ header {
   background: var(--color1);
   position: sticky;
   top: -120px;
-}
-
-a {
-  text-decoration: none;
 }
 
 .contenedorHeader {
@@ -91,10 +87,12 @@ a {
   justify-content: center;
 }
 #portada {
+  border-radius: 10px;
   height: auto;
-  width: 100%;
+  width: auto;
+  max-width: 1000px;
   max-height: 450px;
-  margin-top: 0px;
+  margin-top: 20px;
 }
 #tabla {
   margin: 150px auto;
@@ -120,14 +118,7 @@ tr:nth-child(even) {
 h1 {
   text-align: center;
   color: white;
-  text-shadow: 2px 2px grey;
-  font-weight: bold;
 }
-.info {
-  color: white;
-  text-shadow: 2px 2px black;
-}
-
 .desplegable {
   width: 90%;
   max-width: 120em;
@@ -144,8 +135,8 @@ h1 {
   margin: 0 0 1em;
   padding: 1em;
   color: white;
+  text-decoration: underline;
 }
-
 .desplegable .contenido {
   text-align: center;
   margin-left: 10px;
