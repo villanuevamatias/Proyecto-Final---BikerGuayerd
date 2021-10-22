@@ -177,7 +177,7 @@ h1 {
   overflow: hidden;
   /* display: none; */
   max-height: 0;
-  transition: max-height 0.2ms ease-out;
+  transition: max-height 50ms ease-out;
 
 }
 .colapsable:after{
