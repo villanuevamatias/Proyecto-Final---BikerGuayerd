@@ -86,7 +86,8 @@ background-color: var(--color1);
  width: 200px; border-bottom-right-radius: 30px ;
 }
 #activo{
-  text-shadow:black 1px 1px 2px ;
+  color:white;
+  text-shadow: var(--color2) 2px 2px 2px ;
   
 }
 /* ---FINHEADER--*/
@@ -196,4 +197,7 @@ input {
   display: none;
   width: 100px;
   margin-left: 80%;
+}
+textarea{
+  width:295px;
 }
