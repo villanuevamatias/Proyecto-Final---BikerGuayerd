@@ -30,11 +30,14 @@ a {
 }
 
 .contenedorHeader {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  overflow: hidden;
-  position: sticky;
+  width: 100%;
+  /* max-width: 1200px; */
+  /* margin: auto; */
+  /* overflow: hidden; */
+  position: -webkit-sticky;
+  position: sticky ;
+  background-color: var(--color1);
+  top: 0px;
 }
 
 .contenedor-logo {
@@ -89,6 +92,7 @@ a {
 .imgPortada {
   display: flex;
   justify-content: center;
+  position: static;
 }
 #portada {
   height: auto;
