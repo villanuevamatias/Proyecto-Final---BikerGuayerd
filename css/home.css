@@ -193,7 +193,7 @@ h1 {
   max-height: 0;
   transition: max-height 100ms ease-out;
 }
-.colapsable {
+.colapsable:after {
   color: var(--color1);
   font-weight: bold;
   float: right;
