@@ -30,7 +30,11 @@ header {
   width: 100%;
   background: var(--color1);
   position: sticky;
-  top: -120px;
+  top: -153px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .contenedor {
@@ -41,10 +45,13 @@ header {
 }
 
 .contenedor-logo {
+ 
+  height: 145px;
   display: flex;
   justify-content: flex-start;
 }
 .logo {
+  border: solid blanchedalmond;
   margin-top: 20px;
   color: white;
   font-size: 30px;
@@ -76,10 +83,23 @@ header {
   border-radius: 5px;
 }
 .imgLogo {
-  width: 15%;
+  
+  width: 170px;
   margin-top: 10px;
+  padding-left: 10px;
 }
-
+#fondolog{
+  position: fixed;
+  top: 0px;
+  background-color: var(--color1);
+   width: 200px; 
+ border-bottom-right-radius: 30px ;
+}
+#activo{
+  color:white;
+  text-shadow: var(--color2) 2px 2px 2px ;
+  
+}
 /* MAIN CONTENT*/
 
 .slides {
