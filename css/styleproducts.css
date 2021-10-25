@@ -45,7 +45,6 @@ a {
 }
 
 .contenedor-logo {
- 
   height: 145px;
   display: flex;
   justify-content: flex-start;
@@ -83,22 +82,20 @@ a {
   border-radius: 5px;
 }
 .imgLogo {
-  
   width: 170px;
   margin-top: 10px;
   padding-left: 10px;
 }
-#fondolog{
+#fondolog {
   position: fixed;
   top: 0px;
   background-color: var(--color1);
-   width: 200px; 
- border-bottom-right-radius: 30px ;
+  width: 200px;
+  border-bottom-right-radius: 30px;
 }
-#activo{
-  color:white;
-  text-shadow: var(--color2) 2px 2px 2px ;
-  
+#activo {
+  color: white;
+  text-shadow: var(--color2) 2px 2px 2px;
 }
 /* MAIN CONTENT*/
 
@@ -172,6 +169,8 @@ a {
   font-family: var(--fuenteHeading);
   margin: 20px;
   color: var(--color3);
+  text-shadow: 2px 2px black;
+  color: white;
 }
 
 .producto__nombre {
