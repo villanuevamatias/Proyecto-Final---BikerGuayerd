@@ -12,6 +12,7 @@ h2.forEach((cadaH2, i) => {
 });
 */
 var coll = document.getElementsByClassName("colapsable");
+console.log(coll);
 var i;
 
 for (i = 0; i < coll.length; i++) {
