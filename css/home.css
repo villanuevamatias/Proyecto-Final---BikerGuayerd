@@ -129,7 +129,7 @@ thead {
   border-bottom: solid 5px darkblue;
 }
 tr:nth-child(even) {
-  background-color: #01a1dd;
+  background-color: white;
 }
 h1 {
   text-align: center;
