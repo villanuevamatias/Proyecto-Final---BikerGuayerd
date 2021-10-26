@@ -58,15 +58,23 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/stylesContacto.css" />
+    <script>
+      (function (h, e, a, t, m, p) {
+        m = e.createElement(a);
+        m.async = !0;
+        m.src = t;
+        p = e.getElementsByTagName(a)[0];
+        p.parentNode.insertBefore(m, p);
+      })(window, document, "script", "https://u.heatmap.it/log.js");
+    </script>
   </head>
 
   <body>
     <div class="estilo">
       <header>
         <div class="contenedorHeader">
-          
           <div class="contenedor-logo">
-            <a id=fondolog  href="./home.html"
+            <a id="fondolog" href="./home.html"
               ><img class="imgLogo" src="../images/images.png"
             /></a>
             <!-- <div class="logo">Guayerd Bikes</div> -->
@@ -75,7 +83,7 @@
           <nav class="navegacion">
             <a class="enlaces" href="home.html"> Home </a>
             <a class="enlaces" href="products.html"> Productos </a>
-            <a id="activo" class="enlaces"  href="contacto.html">Contactos</a>
+            <a id="activo" class="enlaces" href="contacto.html">Contactos</a>
           </nav>
         </div>
       </header>
@@ -138,13 +146,14 @@
           ></iframe>
         </div>
       </div>
-<!-- whatsapp con globo flotante -->
+      <!-- whatsapp con globo flotante -->
       <div id="whatsappflot">
         <div id="globo"><img src="../images/tipo-de-globos.png" /></div>
         <a
           href="https://www.whatsapp.com/?lang=es"
           target="_blank"
-          onmouseover="mostrarGlobo()" onmouseout="ocultarGlobo()"
+          onmouseover="mostrarGlobo()"
+          onmouseout="ocultarGlobo()"
           ><img id="iconWsp" src="../images/icons8-whatsapp (1).gif" alt="logo"
         /></a>
       </div>

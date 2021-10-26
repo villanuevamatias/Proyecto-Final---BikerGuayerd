@@ -50,6 +50,15 @@
     />
     <title>Guayerd Bikes - Bicicletas de Competición y Urbanas.</title>
     <script defer src="../js/home.js"></script>
+    <script>
+      (function (h, e, a, t, m, p) {
+        m = e.createElement(a);
+        m.async = !0;
+        m.src = t;
+        p = e.getElementsByTagName(a)[0];
+        p.parentNode.insertBefore(m, p);
+      })(window, document, "script", "https://u.heatmap.it/log.js");
+    </script>
   </head>
   <body>
     <div id="estilo">
@@ -57,18 +66,31 @@
         <!-- ACA SE INSERTA NAV-->
         <div class="contenedorHeader">
           <div class="contenedor-logo">
-            <a  id=fondolog href="./home.html"
-              ><img class="imgLogo" src="../images/images.png"/></a>
-              <div class="log">
-                <svg class="vector-log" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                  <circle cx="12" cy="7" r="4" />
-                  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-                </svg>
-                <input type="text" class="name" placeholder="Usuario">
-                <input type="email" class="email" placeholder="E-mail">
-                <button class="button-log" type="submit">Login</button>
-              </div>
+            <a id="fondolog" href="./home.html"
+              ><img class="imgLogo" src="../images/images.png"
+            /></a>
+            <div class="log">
+              <svg
+                class="vector-log"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-user"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#ffffff"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="12" cy="7" r="4" />
+                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+              </svg>
+              <input type="text" class="name" placeholder="Usuario" />
+              <input type="email" class="email" placeholder="E-mail" />
+              <button class="button-log" type="submit">Login</button>
+            </div>
           </div>
           <div class="relleno"></div>
           <nav class="navegacion">
@@ -126,14 +148,17 @@
             bicicletas, con una producción anual total de más de 3 millones de
             bicicletas, producidas en las fábricas de Argentina y China.
           </p>
-          <div class="desplegable">          
+          <div class="desplegable">
             <div class="contenedor">
-              <button type="button" class="colapsable"><img src="../images/chevron-radioactivo.png" alt="chevron"><h2 class="h2">Innovación</h2></button>
+              <button type="button" class="colapsable">
+                <img src="../images/chevron-radioactivo.png" alt="chevron" />
+                <h2 class="h2">Innovación</h2>
+              </button>
               <div class="contenido">
                 <p>
                   La historia de cada bicicleta GUAYERD empieza sólo a 100km del
-                  lugar donde la historia de la bicicleta comenzó en  n 1817. Justo
-                  a las afueras de Stuttgart, corazón de Alemania en
+                  lugar donde la historia de la bicicleta comenzó en n 1817.
+                  Justo a las afueras de Stuttgart, corazón de Alemania en
                   innovaciones del sector automovilístico y bastión de marcas
                   líderes en tecnología como Porsche o Mercedes-Benz, es donde
                   tienen su base los diseñadores e ingenieros del departamento
@@ -171,7 +196,10 @@
               </div>
             </div>
             <div class="contenedor">
-              <button type="button" class="colapsable"><img src="../images/chevron-radioactivo.png" alt="chevron"><h2 class="h2">Bicis</h2></button>
+              <button type="button" class="colapsable">
+                <img src="../images/chevron-radioactivo.png" alt="chevron" />
+                <h2 class="h2">Bicis</h2>
+              </button>
 
               <div class="contenido">
                 <p>
@@ -208,7 +236,10 @@
               </div>
             </div>
             <div class="contenedor">
-              <button type="button" class="colapsable"><img src="../images/chevron-radioactivo.png" alt="chevron"><h2 class="h2">Más éxito</h2></button>
+              <button type="button" class="colapsable">
+                <img src="../images/chevron-radioactivo.png" alt="chevron" />
+                <h2 class="h2">Más éxito</h2>
+              </button>
               <div class="contenido">
                 <p>
                   Durante más de una década, GUAYERD ha sido el principal
@@ -243,7 +274,10 @@
               </div>
             </div>
             <div class="contenedor">
-              <button type="button" class="colapsable"><img src="../images/chevron-radioactivo.png" alt="chevron"><h2 class="h2">Premios</h2></button>
+              <button type="button" class="colapsable">
+                <img src="../images/chevron-radioactivo.png" alt="chevron" />
+                <h2 class="h2">Premios</h2>
+              </button>
               <div class="contenido">
                 <p></p>
                 <div>
@@ -343,8 +377,13 @@
       </div>
     </div>
     <!-- contenedor de logo movil de hotsale -->
-    <div id=contenedorHotsale>
-      <a  id=logohotsale href=""><img id=logohotsale2 src="../images/imagen-hot-sale-780x500.png" alt="logohotsale"></a>
+    <div id="contenedorHotsale">
+      <a id="logohotsale" href=""
+        ><img
+          id="logohotsale2"
+          src="../images/imagen-hot-sale-780x500.png"
+          alt="logohotsale"
+      /></a>
     </div>
   </footer>
 </html>
