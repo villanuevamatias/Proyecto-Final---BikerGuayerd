@@ -214,3 +214,33 @@ a {
   font-size: larger;
   font-family: var(--fuenteHeading);
 }
+
+/* POPUP */
+#wrapperModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: none;
+}
+
+#modalContainer {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  background: white;
+  margin: 20% auto;
+  padding: 20px;
+  position: relative;
+}
+
+#closeModal {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
