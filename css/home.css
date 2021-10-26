@@ -210,6 +210,53 @@ h1 {
 /* .desplegable .contenido {
   height: auto;
 } */
+/*logo hotsale*/
+#contenedorHotsale{
+  
+  width: 25%;
+  height: 80%;
+  position: fixed;
+  top: 90px;
+  left: 1300px;
+}
+#logohotsale2{
+  width: 300px;
+}
+#logohotsale{
+animation-name: moverHotsale;
+animation-duration: 20s;
+position: relative;
+animation-timing-function: ease ;
+animation-iteration-count: infinite;
+}
+
+@keyframes moverHotsale {
+  0%{left: 0px; top: 0px;  }
+  5%{left: 190px; top: 90px}
+  10%{left: 0px; top: 180px}
+  15%{left: 190px; top: 270px}
+  20%{left: 0px; top: 360px}
+  25%{left: 190px; top: 450px}
+  30%{left: 0px; top: 540px}
+  35%{left: 190px; top: 630px}
+  45%{left: 0px; top: 720px}
+  50%{left: 190px; top: 810px}
+  100%{left: 0px; top: 0px;  }
+  95%{left: 190px; top: 90px}
+  90%{left: 0px; top: 180px}
+  85%{left: 190px; top: 270px}
+  80%{left: 0px; top: 360px}
+  75%{left: 190px; top: 450px}
+  70%{left: 0px; top: 540px}
+  65%{left: 190px; top: 630px}
+  60%{left: 0px; top: 720px}
+  55%{left: 190px; top: 810px}
+    
+
+}
+
+
+
 /* FOOTER */
 
 .footerContent {
