@@ -249,7 +249,8 @@ h1 {
   left:70%;
 }
 #logohotsale2{
-  width: 300px;
+  height: 150px;
+ margin: auto;
 }
 #logohotsale{
 animation-name: moverHotsale;
