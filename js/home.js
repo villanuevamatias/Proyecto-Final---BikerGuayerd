@@ -54,3 +54,34 @@ function validation(){
 validation();
 
 //--FIN-LOGIN-//
+
+//--CODE POPUP--//
+
+const popupMain = document.querySelector('.popup');
+const popupFondo = document.querySelector('.popup-fondo');
+const close = document.querySelector('.popup-close');
+const close2 = document.querySelector('#no');
+
+
+
+function popUp (){
+    popupFondo.style.visibility = 'visible';
+    popupMain.classList.add('active');
+}
+
+function onView(){
+    time = setTimeout(popUp, 2000);
+}
+onView();
+
+close.addEventListener('click', () => {
+    popupFondo.style.display = 'none';
+    popupMain.classList.remove('active');
+});
+
+close2.addEventListener('click', () => {
+    popupFondo.style.display = 'none';
+    popupMain.classList.remove('active');
+});
+
+//FIN CODE POPUP//
