@@ -5,3 +5,4 @@ setTimeout(function popUp() {
 function closePopUp() {
   document.getElementById("wrapperModal").style.display = "none";
 }
+
