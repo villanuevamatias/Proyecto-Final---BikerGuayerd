@@ -28,7 +28,7 @@ for (i = 0; i < coll.length; i++) {
 }
 
 
-//---LOGIN---
+//---LOGIN---//
 
 function store(){
   /*Recibe los datos del imput*/
@@ -52,3 +52,5 @@ function validation(){
 
 }
 validation();
+
+//--FIN-LOGIN-//
