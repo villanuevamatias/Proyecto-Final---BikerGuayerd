@@ -244,3 +244,66 @@ a {
   cursor: pointer;
   font-size: 1.5rem;
 }
+/* Login */
+.log {
+  position: absolute;
+  right: 30px;
+  margin-top: 10px;
+}
+input {
+  border-radius: 5px;
+  border: 3px inset var(--color2);
+}
+.name {
+  margin-right: 5px;
+}
+
+.button-log {
+  border-radius: 5px;
+  padding: 3px 10px;
+  background-color: var(--color2);
+  color: white;
+  border: 1px outset var(--color1);
+  cursor: pointer;
+  transition: all 0.85s ease;
+}
+
+.button-log:hover {
+  background: var(--color1);
+  color: #fff !important;
+  border: 1px inset var(--color2);
+}
+
+#redireccionProductos {
+  width: 100%;
+  height: auto;
+  background-color: #212c65;
+  text-align: center;
+  margin: 0%;
+}
+h1 {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+#imagenPrincipal {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+#fotoBici {
+  margin: auto;
+  display: block;
+}
+#etiquetas {
+  position: absolute;
+
+  top: 200px;
+  right: 370px;
+}
+.etiqueta {
+  margin: 0px;
+  width: 100px;
+}

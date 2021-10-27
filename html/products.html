@@ -40,33 +40,71 @@
         </script>
 </head>
 <body>
+
+    <!--POPUP Descuentos-->
     <div id="wrapperModal" >
         <div id="modalContainer">
-            <div id="closeModal">x</div>
-            <div id="modal">
-                <h1>ofertas</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam illo iure sapiente laboriosam asperiores voluptates quod, dolorem eaque eos ipsum, praesentium eligendi adipisci sit pariatur exercitationem quia incidunt accusantium. Incidunt?</p>
-            </div>
-        </div>
-        
-        
+            <div id="closeModal" onclick="closePopUp()">x</div>
+            <div id="redireccionProductos">
+                <a href="">¡Comprá en cuotas sin interes en nuestra tienda online!</a>
+              </div>
+          
+              <h1>Bicicletas destacadas</h1>
+              <div id="imagenPrincipal">
+                <a href="productos.html">
+                  <img id="fotoBici" src="./imagenes/guayerdBikesAd.png" alt=""
+                /></a>
+              </div>
+              <div id="etiquetas">
+                <div>
+                  <img class="etiqueta" src="./imagenes/logo_cajasprecios6.png" alt="" />
+                </div>
+                <div>
+                  <img class="etiqueta" src="./imagenes/logo_envio_gratis.png" alt="" />
+                </div>
+              </div>
+        </div>    
     </div>
+    <!--Fin POPUP Descuentos-->
     
 <div class="estilo">
     <header>
         <div class="contenedorHeader">
-                    <div class="contenedor-logo">
-                <a id=fondolog href="./home.html"><img class="imgLogo" src="../images/images.png" /></a>
-                <!-- <div class="logo">Guayerd Bikes</div> -->
+            <div class="contenedor-logo">
+              <a id="fondolog" href="./home.html"
+                ><img class="imgLogo" src="../images/images.png"
+              /></a>
+              <div class="log">
+                <svg
+                  class="vector-log"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-user"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="#ffffff"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <circle cx="12" cy="7" r="4" />
+                  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                </svg>
+                <input type="text" class="name" placeholder="Usuario" />
+                <input type="email" class="email" placeholder="E-mail" />
+                <button class="button-log" type="submit">Login</button>
+              </div>
             </div>
             <div class="relleno"></div>
             <nav class="navegacion">
-                <a class="enlaces" href="home.html"> Home </a>
-                <a id="activo" class="enlaces prodPopUp" href="products.html" onclick="popUp()"> Productos </a>
-                <a class="enlaces" href="contacto.html">Contactos</a>
+              <a class="enlaces" href="home.html"> Home </a>
+              <a id="activo" class="enlaces" href="products.html"> Productos </a>
+              <a class="enlaces" href="contacto.html">Contactos</a>
             </nav>
-        </div>
-    </header>
+          </div>
+            </header>
 
     <div class="title-1">
         <h2 class="subtitle">Productos</h2>
