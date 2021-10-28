@@ -37,11 +37,14 @@ var h = today.getHours();
 var m = today.getMinutes();
 
 function saludar(){
+  if (m<10) {
+    m = "0" + m;
+  }
+
   saludoUs.style.visibility = "visible";
+  
   document.getElementById("timeH").innerHTML = h + ":" + m + " " + "Hs" + " " + "-";
   document.getElementById("userName").innerHTML = userS;
-  document.getElementById("userName").style.textTransform = uppercase;
-
 }
 var userS
 /* SALUDO*/

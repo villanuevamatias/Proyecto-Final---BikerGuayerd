@@ -97,6 +97,31 @@ a {
   color: white;
   text-shadow: var(--color2) 2px 2px 2px;
 }
+
+
+.saludoUser{
+  visibility: hidden;
+}
+
+.contenedorSaludo{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  right: 100px;
+}
+
+.textSaludo{
+  font-family: var(--fuenteHeading);
+  margin-right: 10px;
+  font-size: large;
+  color: white;
+}
+
+.vectorHi{
+  padding-top: 12px;
+}
+
+/* -- FIN SALUDO--*/
 /* MAIN CONTENT*/
 
 .slides {
