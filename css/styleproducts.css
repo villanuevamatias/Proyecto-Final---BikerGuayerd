@@ -98,26 +98,25 @@ a {
   text-shadow: var(--color2) 2px 2px 2px;
 }
 
-
-.saludoUser{
+.saludoUser {
   visibility: hidden;
 }
 
-.contenedorSaludo{
+.contenedorSaludo {
   position: absolute;
   display: flex;
   flex-direction: row;
   right: 100px;
 }
 
-.textSaludo{
+.textSaludo {
   font-family: var(--fuenteHeading);
   margin-right: 10px;
   font-size: large;
   color: white;
 }
 
-.vectorHi{
+.vectorHi {
   padding-top: 12px;
 }
 
@@ -252,8 +251,6 @@ a {
 }
 
 #modalContainer {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
   width: 100%;
   max-width: 300px;
   background: white;
@@ -269,6 +266,15 @@ a {
   cursor: pointer;
   font-size: 1.5rem;
 }
+
+#fotoOfertas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+/* FIN POPUP */
+
 /* Login */
 .log {
   position: absolute;
@@ -298,44 +304,14 @@ input {
   color: #fff !important;
   border: 1px inset var(--color2);
 }
-#contenedorNovedades{display: block;
-  color:  var(--color4);
-  margin-top: 5px;}
-
-  /* --FIN LOGIN--*/
-#redireccionProductos {
-  width: 100%;
-  height: auto;
-  background-color: #212c65;
-  text-align: center;
-  margin: 0%;
-}
-h1 {
-  text-align: center;
-}
-a {
-  text-decoration: none;
-  color: white;
-}
-#imagenPrincipal {
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-#fotoBici {
-  margin: auto;
+#contenedorNovedades {
   display: block;
+  color: var(--color4);
+  margin-top: 5px;
 }
-#etiquetas {
-  position: absolute;
 
-  top: 200px;
-  right: 370px;
-}
-.etiqueta {
-  margin: 0px;
-  width: 100px;
-}
+/* --FIN LOGIN--*/
+
 /*logo hotsale*/
 
 #logohotsale2 {
@@ -345,7 +321,7 @@ a {
 #logohotsale {
   display: none;
   animation-name: moverHotsale;
-  animation-duration:60s;
+  animation-duration: 60s;
   position: fixed;
   animation-timing-function: ease;
   animation-iteration-count: 3;
@@ -370,7 +346,7 @@ a {
   }
   20% {
     left: 65%;
-    top:40%;
+    top: 40%;
   }
   25% {
     left: 85%;
@@ -381,7 +357,7 @@ a {
     top: 60%;
   }
   35% {
-    left:85%;
+    left: 85%;
     top: 70%;
   }
   45% {
@@ -392,20 +368,20 @@ a {
     left: 85%;
     top: 90%;
   }
-  
+
   55% {
     left: 65%;
     top: 80%;
   }
   60% {
-    left:85%;
+    left: 85%;
     top: 70%;
   }
   65% {
     left: 65%;
     top: 60%;
   }
-  
+
   70% {
     left: 85%;
     top: 50%;
@@ -418,12 +394,12 @@ a {
     left: 85%;
     top: 30%;
   }
-  
+
   85% {
     left: 65%;
     top: 20%;
   }
-  
+
   90% {
     left: 85%;
     top: 10%;
@@ -434,6 +410,5 @@ a {
   }
   100% {
     width: 10px;
-    }
-  
+  }
 }
