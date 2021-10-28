@@ -62,7 +62,6 @@ if(inputEmail===correo){
   //saludar(); //si existe el usuario saludar
   sessionStorage.setItem("ocultarLogin", "si" );// esta variable temporaria nos servira para mostrar o los login de los demas site.
   ocultarLogin();
-  saludar();
   if(Novedades.checked){//si el check box fue tildado mostraremos el logo flotante de hotsale.
    sessionStorage.setItem("Novedades", "si");
      mostrarhotsale();
@@ -78,8 +77,6 @@ if(inputEmail===correo){
   }
   sessionStorage.setItem("ocultarLogin", "si" );// esta variable temporaria nos servira para mostrar o los login de los demas site.
   ocultarLogin();
-  saludar();
-
   /*Almacena los datos en el LocalStorage*/
   localStorage.setItem("usuarios", inputUser);
   localStorage.setItem("Email", inputEmail);
@@ -106,6 +103,7 @@ function ocultarLogin() {
   var opcion= sessionStorage.getItem("ocultarLogin");
   console.log(opcion);
   if(opcion==="si"){
+    saludar();
     document.getElementById("contenedorLogin").style.display="none";
   }
   

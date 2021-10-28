@@ -93,6 +93,7 @@ function ocultarLogin() {
   var opcion= sessionStorage.getItem("ocultarLogin");
   console.log(opcion);
   if(opcion==="si"){
+    saludar()
     document.getElementById("contenedorLogin").style.display="none";
   }
   
