@@ -151,7 +151,7 @@ function asignarcupon (){
 const popupMain = document.querySelector('.popup');
 const popupFondo = document.querySelector('.popup-fondo');
 const close = document.querySelector('.popup-close');
-const close2 = document.querySelector('#no');
+const close2 = document.querySelector('#Aceptar');
 
 
 
