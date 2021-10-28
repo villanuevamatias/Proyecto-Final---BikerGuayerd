@@ -49,7 +49,7 @@
       content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
     />
     <title>Guayerd Bikes - Bicicletas de Competición y Urbanas.</title>
-    <script defer src="../js/home.js"></script>
+    <script defer src="./js/home.js"></script>
     <script>
       (function (h, e, a, t, m, p) {
         m = e.createElement(a);
@@ -65,11 +65,13 @@
       <header>
         <!-- ACA SE INSERTA NAV-->
         <div class="contenedorHeader">
+          
           <div class="contenedor-logo">
             <a id="fondolog" href="./index.html"
               ><img class="imgLogo" src="./images/images.png"
             /></a>
-            <div class="log">
+            <!-- COMIENZA LOGIN -->
+            <div id=contenedorLogin class="log">
               <svg
                 class="vector-log"
                 xmlns="http://www.w3.org/2000/svg"
@@ -87,10 +89,13 @@
                 <circle cx="12" cy="7" r="4" />
                 <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
               </svg>
-              <input type="text" class="name" placeholder="Usuario" />
-              <input type="email" class="email" placeholder="E-mail" />
-              <button class="button-log" type="submit">Login</button>
+              <input type="text" class="name" id=us placeholder="Usuario" />
+              <input type="email" class="email" id=em placeholder="E-mail" />
+              <button class="button-log" type="submit" onclick="store()">Login</button>
+              <label id="contenedorNovedades"><input type="checkbox" id="Novedades" > Deseo recibir novedades</label>
             </div>
+            <!-- \FINALIZA LOGIN -->
+
           </div>
           <div class="relleno"></div>
           <nav class="navegacion">
@@ -316,7 +321,7 @@
     </div>
   </body>
   <!--POPUP-NOVEDADES-->
-  <div class="popup-fondo">
+  <!-- <div class="popup-fondo">
     <div class="popup" id="popup">
         <div class="popup-close">X</div>
         <div class="popup-content">
@@ -328,7 +333,7 @@
             
         </div>
     </div>
-</div>
+</div> -->
   <!--FIN-POPUP-NOVEDADES-->
   <footer>
     <div class="footerContent">
@@ -391,14 +396,15 @@
         </svg>
       </div>
     </div>
-    <!-- contenedor de logo movil de hotsale -->
+    <!-- logo movil de hotsale -->
    
-      <a id="logohotsale" href="./html/products.html"
+      <a id="logohotsale" href="./html/products.html" onclick="ocultarhotsale()"
         ><img
           id="logohotsale2"
           src="./images/imagen-hot-sale-780x500.png"
           alt="logohotsale"
       /></a>
+      <!-- Fin logo movil hotsale -->
     </div>
   </footer>
 </html>

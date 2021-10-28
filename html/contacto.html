@@ -67,7 +67,7 @@
             <a id="fondolog" href="../index.html"
               ><img class="imgLogo" src="../images/images.png"
             /></a>
-            <div class="log">
+            <div id=contenedorLogin class="log">
               <svg
                 class="vector-log"
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,9 +85,12 @@
                 <circle cx="12" cy="7" r="4" />
                 <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
               </svg>
-              <input type="text" class="name" placeholder="Usuario" />
-              <input type="email" class="email" placeholder="E-mail" />
-              <button class="button-log" type="submit">Login</button>
+              <input type="text" class="name inputL" id=us placeholder="Usuario" />
+              <input type="email" class="email inputL" id=em placeholder="E-mail" />
+    
+              <button class="button-log" type="submit" onclick="store()">Login</button>
+                <label id="contenedorNovedades"><input type="checkbox" id="Novedades" > Deseo recibir novedades</label>
+
             </div>
           </div>
           <div class="relleno"></div>
@@ -99,11 +102,11 @@
         </div>
       </header>
       <div id="divPrincipal">
-        <div class="h1"><h1>Contactate con nuesto STAFF</h1></div>
+        <div class="h1"><h1>Contactate con nosotros</h1></div>
         <div id="form">
           <form id="formInterno">
             <p>
-              <label style="width: 90px">Nombre</label>
+              <label class="labelForm" style="width: 90px">Nombre</label>
               <input
                 class="inputs"
                 type="text"
@@ -112,7 +115,7 @@
               />
             </p>
             <p>
-              <label style="width: 90px">Email</label>
+              <label class="labelForm" style="width: 90px">Email</label>
               <input
                 class="inputs"
                 type="email"
@@ -121,7 +124,7 @@
               />
             </p>
             <p>
-              <label>Tema</label>
+              <label class="labelForm">Tema</label>
               <select name="Select" placeholder="select">
                 <option name="1" value="Venta">Venta</option>
                 <option name="2" value="Trabajo">Trabajo</option>
@@ -130,7 +133,7 @@
               </select>
             </p>
             <p>
-              <label>Mensaje</label>
+              <label class="labelForm">Mensaje</label>
               <textarea
                 name="mensaje"
                 id="mensaje"
@@ -230,6 +233,16 @@
           </svg>
         </div>
       </div>
+      
+    <!-- logo movil de hotsale -->
+   
+    <a id="logohotsale" href="./html/products.html" onclick="ocultarhotsale()"
+    ><img
+      id="logohotsale2"
+      src="./images/imagen-hot-sale-780x500.png"
+      alt="logohotsale"
+  /></a>
+  <!-- Fin logo movil hotsale -->
     </footer>
   </body>
 </html>

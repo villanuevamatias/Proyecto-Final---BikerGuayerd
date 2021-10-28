@@ -245,7 +245,7 @@ a {
   font-size: 1.5rem;
 }
 /* Login */
-.log {
+.log2 {
   position: absolute;
   right: 30px;
   margin-top: 10px;
@@ -273,6 +273,9 @@ input {
   color: #fff !important;
   border: 1px inset var(--color2);
 }
+#contenedorNovedades{display: block;
+color:  var(--color4);
+margin-top: 5px;}
 
 #redireccionProductos {
   width: 100%;
@@ -306,4 +309,105 @@ a {
 .etiqueta {
   margin: 0px;
   width: 100px;
+}
+/*logo hotsale*/
+
+#logohotsale2 {
+  height: 150px;
+  margin: auto;
+}
+#logohotsale {
+  display: none;
+  animation-name: moverHotsale;
+  animation-duration:60s;
+  position: fixed;
+  animation-timing-function: ease;
+  animation-iteration-count: 3;
+}
+
+@keyframes moverHotsale {
+  0% {
+    left: 65%;
+    top: 0%;
+  }
+  5% {
+    left: 85%;
+    top: 10%;
+  }
+  10% {
+    left: 65%;
+    top: 20%;
+  }
+  15% {
+    left: 85%;
+    top: 30%;
+  }
+  20% {
+    left: 65%;
+    top:40%;
+  }
+  25% {
+    left: 85%;
+    top: 50%;
+  }
+  30% {
+    left: 65%;
+    top: 60%;
+  }
+  35% {
+    left:85%;
+    top: 70%;
+  }
+  45% {
+    left: 65%;
+    top: 80%;
+  }
+  50% {
+    left: 85%;
+    top: 90%;
+  }
+  
+  55% {
+    left: 65%;
+    top: 80%;
+  }
+  60% {
+    left:85%;
+    top: 70%;
+  }
+  65% {
+    left: 65%;
+    top: 60%;
+  }
+  
+  70% {
+    left: 85%;
+    top: 50%;
+  }
+  75% {
+    left: 65%;
+    top: 40%;
+  }
+  80% {
+    left: 85%;
+    top: 30%;
+  }
+  
+  85% {
+    left: 65%;
+    top: 20%;
+  }
+  
+  90% {
+    left: 85%;
+    top: 10%;
+  }
+  95% {
+    left: 65%;
+    top: 0%;
+  }
+  100% {
+    width: 10px;
+    }
+  
 }

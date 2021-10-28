@@ -6,6 +6,7 @@ html {
   --color1: #212c65;
   --color2: #01a1dd;
   --color3: #000000;
+  --color4: #ffffff;
 
   --fuenteHeading: "PT Serif", serif;
 }
@@ -119,7 +120,9 @@ input {
   color: #fff !important;
   border: 1px inset var(--color2);
 }
-
+#contenedorNovedades{display: block;
+  color:  var(--color4);
+  margin-top: 5px;}
 /* ---FIN CODE NAV---*/
 
 #estilo {
@@ -240,18 +243,13 @@ h1 {
   height: auto;
 } */
 /*logo hotsale*/
-#contenedorHotsale {
-  width: 25%;
-  height: 80%;
-  position: fixed;
-  top: 20%;
-  left: 70%;
-}
+
 #logohotsale2 {
   height: 150px;
   margin: auto;
 }
 #logohotsale {
+  display: none;
   animation-name: moverHotsale;
   animation-duration:60s;
   position: fixed;

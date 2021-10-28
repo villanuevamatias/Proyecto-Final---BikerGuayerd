@@ -51,16 +51,15 @@
           
               <h1>Bicicletas destacadas</h1>
               <div id="imagenPrincipal">
-                <a href="productos.html">
-                  <img id="fotoBici" src="./imagenes/guayerdBikesAd.png" alt=""
-                /></a>
+                <a href="products.html">
+                  <img id="fotoBici" src="" alt=""/></a>
               </div>
               <div id="etiquetas">
                 <div>
-                  <img class="etiqueta" src="./imagenes/logo_cajasprecios6.png" alt="" />
+                  <img class="etiqueta" src="" alt="" />
                 </div>
                 <div>
-                  <img class="etiqueta" src="./imagenes/logo_envio_gratis.png" alt="" />
+                  <img class="etiqueta" src="" alt="" />
                 </div>
               </div>
         </div>    
@@ -68,44 +67,50 @@
     <!--Fin POPUP Descuentos-->
     
 <div class="estilo">
-    <header>
-        <div class="contenedorHeader">
-            <div class="contenedor-logo">
-              <a id="fondolog" href="../index.html"
-                ><img class="imgLogo" src="../images/images.png"
-              /></a>
-              <div class="log">
-                <svg
-                  class="vector-log"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-user"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="#ffffff"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <circle cx="12" cy="7" r="4" />
-                  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-                </svg>
-                <input type="text" class="name" placeholder="Usuario" />
-                <input type="email" class="email" placeholder="E-mail" />
-                <button class="button-log" type="submit">Login</button>
-              </div>
-            </div>
-            <div class="relleno"></div>
-            <nav class="navegacion">
-              <a class="enlaces" href="../index.html"> Home </a>
-              <a id="activo" class="enlaces" href="products.html"> Productos </a>
-              <a class="enlaces" href="contacto.html">Contactos</a>
-            </nav>
-          </div>
-            </header>
+  <header>
+    <!-- ACA SE INSERTA NAV-->
+    <div class="contenedorHeader">
+      
+      <div class="contenedor-logo">
+        <a id="fondolog" href="../index.html"
+          ><img class="imgLogo" src="../images/images.png"
+        /></a>
+        <!-- COMIENZA LOGIN -->
+        <div id="contenedorLogin" class="log2">
+          <svg
+            class="vector-log"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-user"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="#ffffff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <circle cx="12" cy="7" r="4" />
+            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+          </svg>
+          <input type="text" class="name" id=us placeholder="Usuario" />
+          <input type="email" class="email" id=em placeholder="E-mail" />
+          <button class="button-log" type="submit" onclick="store()">Login</button>
+          <label id="contenedorNovedades"><input type="checkbox" id="Novedades" > Deseo recibir novedades</label>
+        </div>
+        <!-- \FINALIZA LOGIN -->
 
+      </div>
+      <div class="relleno"></div>
+      <nav class="navegacion">
+        <a  class="enlaces" href="/index.html"> Home </a>
+        <a id="activo" class="enlaces" href="../html/products.html"> Productos </a>
+        <a class="enlaces" href="../html/contacto.html">Contactos</a>
+      </nav>
+    </div>
+    <!-- FIN DE NAV-->
+  </header>
     <div class="title-1">
         <h2 class="subtitle">Productos</h2>
     </div>
@@ -224,6 +229,16 @@
             </svg>
           </div>
         </div>
+        
+    <!-- logo movil de hotsale -->
+   
+      <a id="logohotsale" href="../html/products.html" onclick="ocultarhotsale()"
+      ><img
+        id="logohotsale2"
+        src="../images/imagen-hot-sale-780x500.png"
+        alt="logohotsale"
+    /></a>
+    <!-- Fin logo movil hotsale -->
       </footer>
 </body>
 </html>
