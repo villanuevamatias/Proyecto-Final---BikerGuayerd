@@ -123,6 +123,31 @@ input {
 #contenedorNovedades{display: block;
   color:  var(--color4);
   margin-top: 5px;}
+
+  /* --FIN LOGIN--*/
+  .saludoUser{
+    visibility: hidden;
+  }
+  
+  .contenedorSaludo{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    right: 100px;
+  }
+  
+  .textSaludo{
+    font-family: var(--fuenteHeading);
+    margin-right: 10px;
+    font-size: large;
+    color: white;
+  }
+  
+  .vectorHi{
+    padding-top: 12px;
+  }
+  
+  /* -- FIN SALUDO--*/
 /* ---FIN CODE NAV---*/
 
 #estilo {

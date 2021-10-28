@@ -29,18 +29,37 @@ for (i = 0; i < coll.length; i++) {
 
 //---LOGIN---//
 
+
+/*SALUDO*/
+const saludoUs = document.querySelector('#saludoUser');
+const today = new Date();
+var h = today.getHours();
+var m = today.getMinutes();
+
+function saludar(){
+  saludoUs.style.visibility = "visible";
+  document.getElementById("timeH").innerHTML = h + ":" + m + " " + "Hs" + " " + "-";
+  document.getElementById("userName").innerHTML = userS;
+  document.getElementById("userName").style.textTransform = uppercase;
+
+}
+var userS
+/* SALUDO*/
+
 function store(){
   /*Recibe los datos del imput*/
   var inputUser = document.getElementById("us").value;
   var inputEmail = document.getElementById("em").value;
   var Novedades =document.getElementById("Novedades");
   // Comprobar si local esta guardado
+  userS = localStorage.getItem("usuarios");
   var correo = localStorage.getItem("Email");
   console.log(Novedades.checked);
 if(inputEmail===correo){
   //saludar(); //si existe el usuario saludar
   sessionStorage.setItem("ocultarLogin", "si" );// esta variable temporaria nos servira para mostrar o los login de los demas site.
   ocultarLogin();
+  saludar();
   if(Novedades.checked){//si el check box fue tildado mostraremos el logo flotante de hotsale.
    sessionStorage.setItem("Novedades", "si");
      mostrarhotsale();
@@ -56,6 +75,7 @@ if(inputEmail===correo){
   }
   sessionStorage.setItem("ocultarLogin", "si" );// esta variable temporaria nos servira para mostrar o los login de los demas site.
   ocultarLogin();
+  saludar();
 
   /*Almacena los datos en el LocalStorage*/
   localStorage.setItem("usuarios", inputUser);

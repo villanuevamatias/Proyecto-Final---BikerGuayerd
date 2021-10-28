@@ -6,7 +6,7 @@ setTimeout(function popUp() {
     console.log("popup");
   document.getElementById("wrapperModal").style.display = "flex";
   }
-}, 1000);
+}, 3000);
 
 function closePopUp() {
   document.getElementById("wrapperModal").style.display = "none";
@@ -31,7 +31,7 @@ function ocultarLogin() {
     document.getElementById("contenedorLogin").style.display = "none";
   }
   
-}, 1000);
+}, 0);
 //---LOGIN---//
 
 function store(){
