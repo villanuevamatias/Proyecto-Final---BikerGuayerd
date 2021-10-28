@@ -247,16 +247,24 @@ a {
   width: 100%;
   height: 100%;
   z-index: 1000;
-  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
 }
 
-#modalContainer {
-  width: 100%;
-  max-width: 300px;
+.modalContainer {
+  width: 40%;
+  height: 50%;
   background: white;
-  margin: 20% auto;
-  padding: 20px;
+  margin: 5% auto;
   position: relative;
+  opacity: 0;
+  transition: 1s ease all;
+  transform: scale(0.7);
+}
+
+.modalContainer.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 #closeModal {
@@ -268,9 +276,10 @@ a {
 }
 
 #fotoOfertas {
-  display: block;
+  display: flex;
   width: 100%;
   height: 100%;
+  border: 3px solid black;
   justify-content: center;
 }
 /* FIN POPUP */

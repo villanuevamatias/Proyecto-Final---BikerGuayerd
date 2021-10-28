@@ -69,7 +69,7 @@
             /></a>
 
             <!-- COMIENZA LOGIN -->
-            <div id=contenedorLogin class="log">
+            <div id="contenedorLogin" class="log">
               <svg
                 class="vector-log"
                 xmlns="http://www.w3.org/2000/svg"
@@ -87,26 +87,57 @@
                 <circle cx="12" cy="7" r="4" />
                 <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
               </svg>
-              <input type="text" class="name inputL" id=us placeholder="Usuario" />
-              <input type="email" class="email inputL" id=em placeholder="E-mail" />
-    
-              <button class="button-log" type="submit" onclick="store()">Login</button>
-                <label id="contenedorNovedades"><input type="checkbox" id="Novedades" > Deseo recibir novedades</label>
+              <input
+                type="text"
+                class="name inputL"
+                id="us"
+                placeholder="Usuario"
+              />
+              <input
+                type="email"
+                class="email inputL"
+                id="em"
+                placeholder="E-mail"
+              />
 
+              <button class="button-log" type="submit" onclick="store()">
+                Login
+              </button>
+              <label id="contenedorNovedades"
+                ><input type="checkbox" id="Novedades" /> Deseo recibir
+                novedades</label
+              >
             </div>
 
             <!--SALUDO USUARIO-->
-            <div class="saludoUser" id ="saludoUser">
+            <div class="saludoUser" id="saludoUser">
               <div class="contenedorSaludo">
                 <p class="textSaludo hours" id="timeH">00:00 Hs -</p>
-                <p class="textSaludo hi">Buenas Tardes <span class="userSpan" id="userName">USER</span> -</p>
-                <svg class="vectorHi" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                  <path d="M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-12" />
+                <p class="textSaludo hi">
+                  Buenas Tardes
+                  <span class="userSpan" id="userName">USER</span> -
+                </p>
+                <svg
+                  class="vectorHi"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-cloud"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="#ffffff"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-12"
+                  />
                 </svg>
               </div>
-
-            </div> <!--Fin SALUDO USUARIO-->
+            </div>
+            <!--Fin SALUDO USUARIO-->
           </div>
           <div class="relleno"></div>
           <nav class="navegacion">
@@ -140,7 +171,7 @@
             </p>
             <p>
               <label class="labelForm">Tema</label>
-              <select name="Select" class=" inputL" placeholder="select">
+              <select name="Select" class="inputL" placeholder="select">
                 <option name="1" value="Venta">Venta</option>
                 <option name="2" value="Trabajo">Trabajo</option>
                 <option name="3" value="Reparación">Reparación</option>
@@ -152,7 +183,7 @@
               <textarea
                 name="mensaje"
                 id="mensaje"
-                class=" inputL"
+                class="inputL"
                 cols="30"
                 rows="10"
               ></textarea>
@@ -249,16 +280,19 @@
           </svg>
         </div>
       </div>
-      
-    <!-- logo movil de hotsale -->
-   
-    <a id="logohotsale" href="./html/products.html" onclick="ocultarhotsale()"
-    ><img
-      id="logohotsale2"
-      src="./images/imagen-hot-sale-780x500.png"
-      alt="logohotsale"
-  /></a>
-  <!-- Fin logo movil hotsale -->
+
+      <!-- logo movil de hotsale -->
+
+      <a
+        id="logohotsale"
+        href="../html/products.html"
+        onclick="ocultarhotsale()"
+        ><img
+          id="logohotsale2"
+          src="../images/imagen-hot-sale-780x500.png"
+          alt="logohotsale"
+      /></a>
+      <!-- Fin logo movil hotsale -->
     </footer>
   </body>
 </html>
