@@ -42,7 +42,7 @@ function saludar(){
   }
 
   saludoUs.style.visibility = "visible";
-  
+  userS = localStorage.getItem("usuarios"); 
   document.getElementById("timeH").innerHTML = h + ":" + m + " " + "Hs" + " " + "-";
   document.getElementById("userName").innerHTML = userS;
 }
@@ -69,7 +69,7 @@ if(inputEmail===correo){
   }
 
 }else{ // en  caso que el usuario no este guardado en local storage 
- //asignarcupon ();// funcion que asignara cupon y desprendera un popup
+ asignarcupon ();// funcion que asignara cupon y desprendera un popup
  if(Novedades.checked){//si el check box fue tildado mostraremos el logo flotante de hotsale.
      mostrarhotsale();
   sessionStorage.setItem("Novedades", "si");
@@ -110,34 +110,69 @@ function ocultarLogin() {
 }
 
 //--FIN-LOGIN-//
+// ASIGNACION DESCUENTO
+function asignarcupon (){
+  let random=parseInt(Math.random()*5+1)
+  textoDescuento="";
+  switch(random){
+    case 1:
+      textoDescuento="Te has ganado el cupon 5HOTSALE para obtener un 5% de descuento";
+ 
+      break;
+    case 2:
+      textoDescuento="Te has ganado el cupon 10HOTSALE para obtener un 10% de descuento";
+ 
+      break;
+    case 3:
+      textoDescuento="Te has ganado el cupon 15HOTSALE para obtener un 15% de descuento";
 
+      break;
+    case 4:
+      textoDescuento="Te has ganado el cupon 20HOTSALE para obtener un 20% de descuento";
+ 
+      break;
+    case 5:
+      textoDescuento="Te has ganado el cupon 25HOTSALE para obtener un 25% de descuento";
+
+        
+       break;
+                
+
+    }
+    document.getElementById("textoDescuento").innerHTML= textoDescuento;
+    onView();
+  }
+  // fin de funcion bono
+  //
+  //
+  //
 //--CODE POPUP--//
 
-// const popupMain = document.querySelector('.popup');
-// const popupFondo = document.querySelector('.popup-fondo');
-// const close = document.querySelector('.popup-close');
-// const close2 = document.querySelector('#no');
+const popupMain = document.querySelector('.popup');
+const popupFondo = document.querySelector('.popup-fondo');
+const close = document.querySelector('.popup-close');
+const close2 = document.querySelector('#no');
 
 
 
-// function popUp (){
-//     popupFondo.style.visibility = 'visible';
-//     popupMain.classList.add('active');
-// }
+function popUp (){
+    popupFondo.style.visibility = 'visible';
+    popupMain.classList.add('active');
+}
 
-// function onView(){
-//     time = setTimeout(popUp, 2000);
-// }
-// onView();
+function onView(){
+    time = setTimeout(popUp, 2000);
+}
 
-// close.addEventListener('click', () => {
-//     popupFondo.style.display = 'none';
-//     popupMain.classList.remove('active');
-// });
 
-// close2.addEventListener('click', () => {
-//     popupFondo.style.display = 'none';
-//     popupMain.classList.remove('active');
-// });
+close.addEventListener('click', () => {
+    popupFondo.style.display = 'none';
+    popupMain.classList.remove('active');
+});
+
+close2.addEventListener('click', () => {
+    popupFondo.style.display = 'none';
+    popupMain.classList.remove('active');
+});
 
 //FIN CODE POPUP

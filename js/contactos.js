@@ -32,7 +32,7 @@ function saludar(){
   }
 
   saludoUs.style.visibility = "visible";
-  
+  userS = localStorage.getItem("usuarios"); 
   document.getElementById("timeH").innerHTML = h + ":" + m + " " + "Hs" + " " + "-";
   document.getElementById("userName").innerHTML = userS;
 }
