@@ -37,21 +37,23 @@ const saludoUs = document.querySelector("#saludoUser");
 const today = new Date();
 var h = today.getHours();
 var m = today.getMinutes();
-var horaMilitar = h + m;
+if (m<10){
+  m = "0"+ m;
+}
+var horaMilitar = "" + h + m;
 
 function saluTemp(momento){
+  console.log(horaMilitar);
   document.getElementById("saludoTemporal").innerHTML = momento;
 }
 
 function saludar() {
-  if (m < 10) {
-    m = "0" + m;
-  }
 
   saludoUs.style.visibility = "visible";
   userS = localStorage.getItem("usuarios");
   document.getElementById("timeH").innerHTML =
     h + ":" + m + " " + "Hs" + " " + "-";
+    console.log(horaMilitar);
     if (horaMilitar >= 1900 && horaMilitar <= 0006){
       saluTemp("Buenas noches, ");
   

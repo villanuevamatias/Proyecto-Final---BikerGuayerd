@@ -12,7 +12,7 @@ h2.forEach((cadaH2, i) => {
 });
 */
 var coll = document.getElementsByClassName("colapsable");
-console.log(coll);
+// console.log(coll);
 var i;
 
 for (i = 0; i < coll.length; i++) {
@@ -35,16 +35,18 @@ const saludoUs = document.querySelector('#saludoUser');
 const today = new Date();
 var h = today.getHours();
 var m = today.getMinutes();
-var horaMilitar = h + m;
+if (m<10) {
+  m = "0" + m;
+}
+var horaMilitar = "" + h + m;
 
 function saluTemp(momento){
   document.getElementById("saludoTemporal").innerHTML = momento;
+  console.log(horaMilitar);
 }
 
 function saludar(){
-  if (m<10) {
-    m = "0" + m;
-  }
+
 
   saludoUs.style.visibility = "visible";
   userS = localStorage.getItem("usuarios"); 
