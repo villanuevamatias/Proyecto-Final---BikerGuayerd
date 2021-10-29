@@ -80,6 +80,9 @@ function store() {
   var inputUser = document.getElementById("us").value;
   var inputEmail = document.getElementById("em").value;
   var Novedades = document.getElementById("Novedades");
+      /*Almacena los datos en el LocalStorage*/
+      localStorage.setItem("usuarios", inputUser);
+  
   // Comprobar si local esta guardado
   var correo = localStorage.getItem("Email");
   console.log(Novedades.checked);
@@ -102,10 +105,8 @@ function store() {
     }
     sessionStorage.setItem("ocultarLogin", "si"); // esta variable temporaria nos servira para mostrar o los login de los demas site.
     ocultarLogin();
-
-    /*Almacena los datos en el LocalStorage*/
-    localStorage.setItem("usuarios", inputUser);
     localStorage.setItem("Email", inputEmail);
+
 
     // console.log(inputUser.value);
     // console.log(inputEmail.value);
