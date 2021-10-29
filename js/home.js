@@ -51,8 +51,8 @@ function saludar(){
   saludoUs.style.visibility = "visible";
   userS = localStorage.getItem("usuarios"); 
   document.getElementById("timeH").innerHTML = h + ":" + m + " " + "Hs" + " " + "-";
-  if (horaMilitar >= 1900 && horaMilitar <= 0006){
-    saluTemp("Buenas noches, ");
+  if (horaMilitar >= 1220 && horaMilitar < 1900){
+    saluTemp("Buenas tardes, ");
 
   }
   else if(horaMilitar > 0006 && horaMilitar < 0612) {
@@ -63,7 +63,7 @@ function saludar(){
     saluTemp("Buenos días, ");
   }
   else {
-    saluTemp("Buenas Tardes, ");
+    saluTemp("Buenas Noches, ");
   }
   document.getElementById("userName").innerHTML = userS;
 }
