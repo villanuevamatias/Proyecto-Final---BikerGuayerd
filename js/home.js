@@ -11,6 +11,18 @@ h2.forEach((cadaH2, i) => {
   });
 });
 */
+
+/*BANNER NUEVO*/
+let APIbanner = fetch(`http://demo2420474.mockable.io/getHomeBanner`); //trae por defecto GET
+APIbanner.then((res) => {
+  return res.json();
+})
+  .then((data) => {
+    document.querySelector("#portada").src = data.imgUrl;
+  })
+  .catch((error) => console.log(error));
+/*FIN BANNER NUEVO*/
+
 var coll = document.getElementsByClassName("colapsable");
 // console.log(coll);
 var i;
@@ -79,7 +91,6 @@ function ocultarLogin() {
   var opcion = sessionStorage.getItem("ocultarLogin");
   console.log(opcion);
   if (opcion === "si") {
-    saludar();
     document.getElementById("contenedorLogin").style.display = "none";
   }
 }
@@ -87,36 +98,18 @@ function ocultarLogin() {
 //--FIN-LOGIN-//
 // ASIGNACION DESCUENTO
 function asignarcupon() {
-  let random = parseInt(Math.random() * 5 + 1);
-  textoDescuento = "";
-  switch (random) {
-    case 1:
-      textoDescuento =
-        "Te has ganado el cupon 5HOTSALE para obtener un 5% de descuento";
+  let APIcupon = fetch(`https://demo2420474.mockable.io/getCoupon`);
+  APIcupon.then((res) => {
+    return res.json();
+  })
+    .then((data) => {
+      console.log("entra data");
+      return (document.getElementById(
+        "textoDescuento"
+      ).innerHTML = `Te has ganado el cupón ${data.text} con un ${data.discountPercentage}% de descuento`);
+    })
+    .catch((error) => console.log(error));
 
-      break;
-    case 2:
-      textoDescuento =
-        "Te has ganado el cupon 10HOTSALE para obtener un 10% de descuento";
-
-      break;
-    case 3:
-      textoDescuento =
-        "Te has ganado el cupon 15HOTSALE para obtener un 15% de descuento";
-
-      break;
-    case 4:
-      textoDescuento =
-        "Te has ganado el cupon 20HOTSALE para obtener un 20% de descuento";
-
-      break;
-    case 5:
-      textoDescuento =
-        "Te has ganado el cupon 25HOTSALE para obtener un 25% de descuento";
-
-      break;
-  }
-  document.getElementById("textoDescuento").innerHTML = textoDescuento;
   onView();
 }
 // fin de funcion bono
