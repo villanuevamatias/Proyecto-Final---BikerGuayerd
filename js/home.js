@@ -27,7 +27,54 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
+<<<<<<< HEAD
 function store() {
+=======
+//---LOGIN---//
+
+
+/*SALUDO*/
+const saludoUs = document.querySelector('#saludoUser');
+const today = new Date();
+var h = today.getHours();
+var m = today.getMinutes();
+if (m<10) {
+  m = "0" + m;
+}
+var horaMilitar = "" + h + m;
+
+function saluTemp(momento){
+  document.getElementById("saludoTemporal").innerHTML = momento;
+  console.log(horaMilitar);
+}
+
+function saludar(){
+
+
+  saludoUs.style.visibility = "visible";
+  userS = localStorage.getItem("usuarios"); 
+  document.getElementById("timeH").innerHTML = h + ":" + m + " " + "Hs" + " " + "-";
+  if (horaMilitar >= 1220 && horaMilitar < 1900){
+    saluTemp("Buenas tardes, ");
+
+  }
+  else if(horaMilitar > 0006 && horaMilitar < 0612) {
+    saluTemp("Buenas madrugadas, ");
+
+  }
+  else if (horaMilitar > 0611 && horaMilitar < 1220){
+    saluTemp("Buenos días, ");
+  }
+  else {
+    saluTemp("Buenas Noches, ");
+  }
+  document.getElementById("userName").innerHTML = userS;
+}
+var userS
+/* SALUDO*/
+
+function store(){
+>>>>>>> 8489de09d35c59eb054d75cb27b02e6b4dcb308d
   /*Recibe los datos del imput*/
   var inputUser = document.getElementById("us").value;
   var inputEmail = document.getElementById("em").value;
