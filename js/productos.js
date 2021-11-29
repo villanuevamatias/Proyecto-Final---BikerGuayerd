@@ -15,60 +15,6 @@ setTimeout(function ocultarLogin() {
   }
 }, 0);
 //---LOGIN---//
-/*SALUDO*/
-const saludoUs = document.querySelector("#saludoUser");
-const today = new Date();
-var h = today.getHours();
-var m = today.getMinutes();
-if (m < 10) {
-  m = "0" + m;
-}
-var horaMilitar = "" + h + m;
-
-function saluTemp(momento) {
-  console.log(horaMilitar);
-  document.getElementById("saludoTemporal").innerHTML = momento;
-}
-
-function saludar() {
-  saludoUs.style.visibility = "visible";
-  userS = localStorage.getItem("usuarios");
-  document.getElementById("timeH").innerHTML =
-    h + ":" + m + " " + "Hs" + " " + "-";
-<<<<<<< HEAD
-  console.log(horaMilitar);
-  if (horaMilitar >= 1900 && horaMilitar <= 0006) {
-    saluTemp("Buenas noches, ");
-  } else if (horaMilitar > 0006 && horaMilitar < 0612) {
-    saluTemp("Buenas madrugadas, ");
-  } else if (horaMilitar > 0611 && horaMilitar < 1220) {
-    saluTemp("Buenos días, ");
-  } else {
-    saluTemp("Buenas Tardes, ");
-  }
-
-=======
-    if (horaMilitar >= 1220 && horaMilitar < 1900){
-      saluTemp("Buenas tardes, ");
-  
-    }
-    else if(horaMilitar > 0006 && horaMilitar < 0612) {
-      saluTemp("Buenas madrugadas, ");
-  
-    }
-    else if (horaMilitar > 0611 && horaMilitar < 1220){
-      saluTemp("Buenos días, ");
-    }
-    else {
-      saluTemp("Buenas Noches, ");
-      }
-  
-  
->>>>>>> 8489de09d35c59eb054d75cb27b02e6b4dcb308d
-  document.getElementById("userName").innerHTML = userS;
-}
-var userS;
-/* SALUDO*/
 
 function store() {
   /*Recibe los datos del imput*/
