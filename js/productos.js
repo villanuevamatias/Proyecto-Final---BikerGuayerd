@@ -1,20 +1,3 @@
-const modalContainerEfecto = document.querySelector(".modalContainer");
-
-setTimeout(function popUp() {
-  let Novedades = sessionStorage.getItem("Novedades");
-  console.log(Novedades + "p");
-  if (Novedades) {
-    // solo saldra si el usuario quiere recibir novedades.
-    console.log("popup");
-    document.getElementById("wrapperModal").style.visibility = "visible";
-    modalContainerEfecto.classList.add("active");
-  }
-}, 1000);
-
-function closePopUp() {
-  document.getElementById("wrapperModal").style.display = "none";
-}
-
 function ocultarLogin() {
   console.log("BORRAR");
   var opcion = sessionStorage.getItem("ocultarLogin");
@@ -37,39 +20,32 @@ const saludoUs = document.querySelector("#saludoUser");
 const today = new Date();
 var h = today.getHours();
 var m = today.getMinutes();
-if (m<10){
-  m = "0"+ m;
+if (m < 10) {
+  m = "0" + m;
 }
 var horaMilitar = "" + h + m;
 
-function saluTemp(momento){
+function saluTemp(momento) {
   console.log(horaMilitar);
   document.getElementById("saludoTemporal").innerHTML = momento;
 }
 
 function saludar() {
-
   saludoUs.style.visibility = "visible";
   userS = localStorage.getItem("usuarios");
   document.getElementById("timeH").innerHTML =
     h + ":" + m + " " + "Hs" + " " + "-";
-    console.log(horaMilitar);
-    if (horaMilitar >= 1900 && horaMilitar <= 0006){
-      saluTemp("Buenas noches, ");
-  
-    }
-    else if(horaMilitar > 0006 && horaMilitar < 0612) {
-      saluTemp("Buenas madrugadas, ");
-  
-    }
-    else if (horaMilitar > 0611 && horaMilitar < 1220){
-      saluTemp("Buenos días, ");
-    }
-    else {
-      saluTemp("Buenas Tardes, ");
-    }
-  
-  
+  console.log(horaMilitar);
+  if (horaMilitar >= 1900 && horaMilitar <= 0006) {
+    saluTemp("Buenas noches, ");
+  } else if (horaMilitar > 0006 && horaMilitar < 0612) {
+    saluTemp("Buenas madrugadas, ");
+  } else if (horaMilitar > 0611 && horaMilitar < 1220) {
+    saluTemp("Buenos días, ");
+  } else {
+    saluTemp("Buenas Tardes, ");
+  }
+
   document.getElementById("userName").innerHTML = userS;
 }
 var userS;
@@ -80,9 +56,9 @@ function store() {
   var inputUser = document.getElementById("us").value;
   var inputEmail = document.getElementById("em").value;
   var Novedades = document.getElementById("Novedades");
-      /*Almacena los datos en el LocalStorage*/
-      localStorage.setItem("usuarios", inputUser);
-  
+  /*Almacena los datos en el LocalStorage*/
+  localStorage.setItem("usuarios", inputUser);
+
   // Comprobar si local esta guardado
   var correo = localStorage.getItem("Email");
   console.log(Novedades.checked);
@@ -106,7 +82,6 @@ function store() {
     sessionStorage.setItem("ocultarLogin", "si"); // esta variable temporaria nos servira para mostrar o los login de los demas site.
     ocultarLogin();
     localStorage.setItem("Email", inputEmail);
-
 
     // console.log(inputUser.value);
     // console.log(inputEmail.value);

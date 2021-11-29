@@ -120,34 +120,36 @@ input {
   color: #fff !important;
   border: 1px inset var(--color2);
 }
-#contenedorNovedades{display: block;
-  color:  var(--color4);
-  margin-top: 5px;}
+#contenedorNovedades {
+  display: block;
+  color: var(--color4);
+  margin-top: 5px;
+}
 
-  /* --FIN LOGIN--*/
-  .saludoUser{
-    visibility: hidden;
-  }
-  
-  .contenedorSaludo{
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    right: 100px;
-  }
-  
-  .textSaludo{
-    font-family: var(--fuenteHeading);
-    margin-right: 10px;
-    font-size: large;
-    color: white;
-  }
-  
-  .vectorHi{
-    padding-top: 12px;
-  }
-  
-  /* -- FIN SALUDO--*/
+/* --FIN LOGIN--*/
+.saludoUser {
+  visibility: hidden;
+}
+
+.contenedorSaludo {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  right: 100px;
+}
+
+.textSaludo {
+  font-family: var(--fuenteHeading);
+  margin-right: 10px;
+  font-size: large;
+  color: white;
+}
+
+.vectorHi {
+  padding-top: 12px;
+}
+
+/* -- FIN SALUDO--*/
 /* ---FIN CODE NAV---*/
 
 #estilo {
@@ -276,7 +278,7 @@ h1 {
 #logohotsale {
   display: none;
   animation-name: moverHotsale;
-  animation-duration:60s;
+  animation-duration: 60s;
   position: fixed;
   animation-timing-function: ease;
   animation-iteration-count: 3;
@@ -301,7 +303,7 @@ h1 {
   }
   20% {
     left: 65%;
-    top:40%;
+    top: 40%;
   }
   25% {
     left: 85%;
@@ -312,7 +314,7 @@ h1 {
     top: 60%;
   }
   35% {
-    left:85%;
+    left: 85%;
     top: 70%;
   }
   45% {
@@ -323,20 +325,20 @@ h1 {
     left: 85%;
     top: 90%;
   }
-  
+
   55% {
     left: 65%;
     top: 80%;
   }
   60% {
-    left:85%;
+    left: 85%;
     top: 70%;
   }
   65% {
     left: 65%;
     top: 60%;
   }
-  
+
   70% {
     left: 85%;
     top: 50%;
@@ -349,12 +351,12 @@ h1 {
     left: 85%;
     top: 30%;
   }
-  
+
   85% {
     left: 65%;
     top: 20%;
   }
-  
+
   90% {
     left: 85%;
     top: 10%;
@@ -365,8 +367,7 @@ h1 {
   }
   100% {
     width: 10px;
-    }
-  
+  }
 }
 
 /* FOOTER */
@@ -391,7 +392,7 @@ h1 {
   visibility: hidden;
 }
 
-.popup{
+.popup {
   text-align: center;
   width: 100%;
   max-width: 300px;
@@ -406,7 +407,6 @@ h1 {
   transition: 1s ease all;
   transform: scale(0.7);
   opacity: 0;
-  
 }
 
 /* animacion popup */
@@ -419,35 +419,35 @@ h1 {
 .popup p {
   opacity: 0;
 }
-.popup.active{
+.popup.active {
   opacity: 1;
   transform: scale(1);
 }
 .popup.active h3 {
-  animation: entradaTitulo .8s ease .5s forwards;
+  animation: entradaTitulo 0.8s ease 0.5s forwards;
 }
 .popup.active p {
-  animation: entradaInpt .8s ease .5s forwards;
+  animation: entradaInpt 0.8s ease 0.5s forwards;
 }
 
 @keyframes entradaTitulo {
   from {
-      transform: translateY(-25px);
-      opacity: 0;
+    transform: translateY(-25px);
+    opacity: 0;
   }
   to {
-      transform: translateY(0);
-      opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 @keyframes entradaInpt {
   from {
-      transform: translateY(25px);
-      opacity: 0;
+    transform: translateY(25px);
+    opacity: 0;
   }
   to {
-      transform: translateY(0);
-      opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 /* ---FIN ANIMACION POPUP--*/
@@ -457,14 +457,14 @@ h1 {
   right: 15px;
   cursor: pointer;
   font-size: 15px;
-  opacity: .6;
+  opacity: 0.6;
 }
 
-.popup-close:hover{
+.popup-close:hover {
   opacity: 1;
 }
 
-.buttons{
+.buttons {
   display: flex;
   justify-content: space-around;
   font-size: 18px;
