@@ -1,3 +1,43 @@
+let APIproductos = fetch(`https://demo2420474.mockable.io/productList`);
+
+APIproductos.then((res) => {
+  return res.json();
+})
+  .then((data) => {
+    data.forEach((e) => {
+      document.querySelector("#produtos").innerHTML += `<div class="grid">
+      <div class="producto">
+          <img class="producto__imagen image-1" src="${e.imgUrl}">
+          <div class="producto__informacion">
+              <h3 class="producto__nombre">${e.title}</h3>
+              <p class="producto__specs">${e.description}
+                  <ul class="ulist">
+                      <li class="inlist">${e.price} ${e.currency}</li>
+                      <li class="inlist">${e.inStock}</li>
+                      <li class="inlist">Rodado: 29</li>
+                      <li class="inlist">Color: verde lorem</li>
+                      <li class="inlist">Tamaño de cuadro: XS 	S 	S/M 	M/L 	L 	XL 	XXL </li>
+                  </ul>
+              </p>
+              <p class="precio" >Precio: $ 100000</p>
+              <div class="botondiv">
+                  <button class="boton">Comprar <svg class="vector" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <circle cx="6" cy="19" r="2" />
+                      <circle cx="17" cy="19" r="2" />
+                      <path d="M17 17h-11v-14h-2" />
+                      <path d="M6 5l14 1l-1 7h-13" />
+                  </svg></button>
+              </div>
+          </div>
+
+      </div>`;
+    });
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
 function ocultarLogin() {
   console.log("BORRAR");
   var opcion = sessionStorage.getItem("ocultarLogin");
