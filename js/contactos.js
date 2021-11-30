@@ -118,3 +118,119 @@ function ocultarLogin() {
   }
   
 }
+// validacion
+let formulario=[
+  campo={
+  "name": "nombre",
+  "valor":false,
+  "focus":document.querySelector("#nombreF")
+  },
+     
+   campo={
+  "name": "mail",
+  "valor":false,
+  "focus":document.querySelector("#mailF")
+},
+campo={
+  "name": "mensaje",
+  "valor":false,
+  "focus":document.querySelector("#mensajeF")
+}
+];
+
+const validarnombre=()=>{//Nombre: mínimo 3 y máximo 16 dígitos.
+  let nombre = document.querySelector("#nombreF").value;
+  console.log("entro nombre");
+let regext = /[a-z]{3,16}/i;
+  if (regext.test(nombre)) {
+      console.log("valido");
+      formulario.forEach(a=>{
+           if(a.name==="nombre"){a.valor=true}});
+  }else{
+      console.log("invalido");
+      formulario.forEach(a=>{ 
+          if(a.name==="nombre"){
+          a.valor=false;
+          a.focus.focus()}});
+      }
+}
+let p=document.querySelector("#nombreF");
+p.addEventListener("blur",validarnombre);
+
+
+
+
+const validarmail=()=>{//Mail: Debe ser un mail válido.
+  let elemento = document.querySelector("#mailF").value;
+  console.log("entromail");
+
+let regext = /@/;
+  if (regext.test(elemento)) {
+      console.log("valido");
+      formulario.forEach(a=>{
+          if(a.name==="mail"){a.valor=true}});
+ }else{
+  console.log("invalido");
+
+     formulario.forEach(a=>{ 
+         if(a.name==="mail"){
+         a.valor=false;
+         a.focus.focus()}});
+
+ }
+}
+document.querySelector("#mailF").addEventListener("blur",validarmail);
+
+
+const validarmensaje=()=>{//Mensaje: Debe contener al menos 30 caracteres.
+  let elemento = document.querySelector("#mensajeF").value;
+  console.log("entro mensaje");
+
+let regext = /[a-z]/i;
+  if (regext.test(elemento)) {
+      console.log("valido");
+      formulario.forEach(a=>{
+          if(a.name==="mensaje"){a.valor=true}});
+ }else{
+  console.log("invalido");
+
+   formulario.forEach(a=>{ 
+         if(a.name==="mensaje"){
+         a.valor=false;
+         a.focus.focus()}});
+
+ }
+ 
+}
+document.querySelector("#mensajeF").addEventListener("blur",validarmensaje);
+
+
+//envio del form
+submit=()=>{
+
+ if(formulario.forEach(a=>{
+      if(!a.valor){
+          a.focus.focus();
+          return false;
+          console.log(`no se envio falto completar ${a.name}`);
+        }else{ return true;
+      }
+    })){
+      
+      console.log(`envio exitoso`);
+      // realizar post
+      let formpost={
+        "name":document.querySelector("#nombreF").value,
+        "email":document.querySelector("#mailF").value,
+        //"phone":document.querySelector("#phoneF").value
+        "subject":document.querySelector("#selectF").value,
+        "message":document.querySelector("mensajeF").value
+      };
+      console.log(formpost);
+
+    
+
+    }
+
+}
+document.querySelector("#botonEnviar")

@@ -100,7 +100,7 @@
                 placeholder="E-mail"
               />
 
-              <button class="button-log" type="submit" onclick="store()">
+              <button class="button-log" type="submit"  onclick="store()">
                 Login
               </button>
               <label id="contenedorNovedades"
@@ -123,7 +123,7 @@
           <form id="formInterno">
             <p>
               <label class="labelForm" style="width: 90px">Nombre</label>
-              <input
+              <input id=nombreF
                 class="inputs inputL"
                 type="text"
                 name="nombre"
@@ -132,7 +132,7 @@
             </p>
             <p>
               <label class="labelForm" style="width: 90px">Email</label>
-              <input
+              <input id=mailF
                 class="inputs inputL"
                 type="email"
                 name="mail"
@@ -141,7 +141,7 @@
             </p>
             <p>
               <label class="labelForm">Tema</label>
-              <select name="Select" class="inputL" placeholder="select">
+              <select name="Select" id=selectF class="inputL" placeholder="select">
                 <option name="1" value="Venta">Venta</option>
                 <option name="2" value="Trabajo">Trabajo</option>
                 <option name="3" value="Reparación">Reparación</option>
@@ -150,7 +150,7 @@
             </p>
             <p>
               <label class="labelForm">Mensaje</label>
-              <textarea
+              <textarea id=mensajeF
                 name="mensaje"
                 id="mensaje"
                 class="inputL"
@@ -159,7 +159,7 @@
               ></textarea>
             </p>
             <p id="boton">
-              <button id="botonEnviar">Enviar</button>
+              <button id="botonEnviar" onclick="submit()">Enviar</button>
             </p>
           </form>
         </div>
