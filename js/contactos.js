@@ -128,16 +128,16 @@ const validarnombre = () => {
   let nombre = document.querySelector("#nombreF").value;
   console.log("entro nombre");
   let regext = /[a-z]{3,16}/i;
-  if (regext.test(nombre)) {
-    console.log("valido");
-    formulario.forEach((a) => {
-      if (a.name === "nombre") {
-        a.valor = true;
-        a.focus.classList.remove("inputIncorrecto");
+  if (regext.test(nombre)) {//comprobar si hay mach con el regext
+    console.log("valido");// si es valido
+    formulario.forEach((a) => {// recorremos el objeto formulario que usaremos luego para el submit
+      if (a.name === "nombre") {//buscando el campo que dice nombre
+        a.valor = true;// asignaremos la bandera del campo como verdadera
+        a.focus.classList.remove("inputIncorrecto");// borraremos la clase inpud incorrecto por si anteriormente fue asignada por previo iingreso fallido de dato
         
       }
     });
-  } else {
+  } else {// similar al if solo que en este caso si el ingreso es invalido asignaremos una bandera falsa y al campo le agregaremos la clase inputIncorrecto para resaltar el campo en rojo y dejar asi en claro que el dato ingresado es incorrecto. 
     console.log("invalido");
     formulario.forEach((a) => {
       if (a.name === "nombre") {
@@ -211,37 +211,39 @@ document.querySelector("#mensajeF").addEventListener("blur", validarmensaje);
 //envio del form
 submit = () => {
   let flag=true  
-  formulario.forEach((a) => {
-    if (!a.valor&&flag) {
-      a.focus.focus();
+  formulario.forEach((a) => {//comprobaremos que todas las banderas esten en verdadero para estar seguro de que todos los campos entan llenos de forma correcta
+    if (!a.valor&&flag) { // el motivo del and flag es para que se detenga en el primer campo que encuente incorrecto para luego poder  llamar al focus del primero faltante
+      a.focus.focus();//haremos focus en el primer campo incorrecto 
       console.log(`no se envio falto completar ${a.name}`);
       flag=false;
     } 
   });
-  if(flag){
+  if(flag){// siempre y cuan do la vandera se quedo en verdadero (es decir que no ento al if anterior)
     console.log(`envio exitoso`);
-    // realizar post
-    let formpost = {
+    // realizaremos post
+    let formpost = {//primero preparamos el objeto para post, es decir traeromos los valores cargados en el formulario
       "name": document.querySelector("#nombreF").value,
       "email": document.querySelector("#mailF").value,
       //"phone":document.querySelector("#phoneF").value
       "subject": document.querySelector("#selectF").value,
       "message": document.querySelector("#mensajeF").value,
     };
-    console.log(formpost);
+    console.log(formpost);//se consologuea todo para poder dar un mejor seguimiento en estapas de test. podremos ver que en el objeto esten todos los datos que cargamos en el formulario
     let url = "https://demo2420474.mockable.io/submitForm";
     
-    fetch(url, {
+    fetch(url, { // fetch para post, por falta de instructivos se busco este metodo en internet, donde el fretch se le da la orde de post
       method: 'POST', 
       body: JSON.stringify(formpost), 
-      // headers:{
+      // headers:{  /////NO ENTENDI PARA QUE ERA ESTA PARTE PERO COMO SI LO SACO NO HACE CAMBIO ALGUNO QUEDO COMENTADO//
         //   'Content-Type': 'application/json'
         // }
       }).then(res => res.json())
       .catch(error => console.error('Error:', error))
-      .then(response => console.log('Success:', response));
+      .then(response => console.log('POST Exitoso:', response));
+      
+      // terminado el post borraremos los campos y volveremos las banderas a false
       formulario.forEach((a) => {
-        console.log("borrandocampos")
+        console.log("borrando campos")
         a.focus.value="";
         a.valor=false;
       });
