@@ -103,8 +103,10 @@ function ocultarLogin() {
     document.getElementById("contenedorLogin").style.display = "none";
   }
 }
+//preventDefault 
 // validacion
-let formulario = [
+let formulario = [ //usaremos este objeto como tabla de comprovacion para saber si todos los campos fueron llenados de manera correcta
+  //algo parecido al flag(bandera)
   (campo = {
     name: "nombre",
     valor: false,
@@ -132,6 +134,8 @@ const validarnombre = () => {
     formulario.forEach((a) => {
       if (a.name === "nombre") {
         a.valor = true;
+        a.focus.classList.remove("inputIncorrecto");
+        
       }
     });
   } else {
@@ -139,7 +143,7 @@ const validarnombre = () => {
     formulario.forEach((a) => {
       if (a.name === "nombre") {
         a.valor = false;
-        a.focus.focus();
+        a.focus.classList.add("inputIncorrecto");
       }
     });
   }
@@ -151,22 +155,25 @@ const validarmail = () => {
   //Mail: Debe ser un mail válido.
   let elemento = document.querySelector("#mailF").value;
   console.log("entromail");
-
+  
   let regext = /@/;
   if (regext.test(elemento)) {
     console.log("valido");
     formulario.forEach((a) => {
       if (a.name === "mail") {
         a.valor = true;
+        a.focus.classList.remove("inputIncorrecto");
+        
       }
     });
   } else {
     console.log("invalido");
-
+    
     formulario.forEach((a) => {
       if (a.name === "mail") {
         a.valor = false;
-        a.focus.focus();
+        a.focus.classList.add("inputIncorrecto");
+        
       }
     });
   }
@@ -177,22 +184,25 @@ const validarmensaje = () => {
   //Mensaje: Debe contener al menos 30 caracteres.
   let elemento = document.querySelector("#mensajeF").value;
   console.log("entro mensaje");
-
-  let regext = /[a-z]/i;
+  
+  let regext = /[ a-zA-Z0-9_\n\r\t\f]{30,}/i;
   if (regext.test(elemento)) {
     console.log("valido");
     formulario.forEach((a) => {
       if (a.name === "mensaje") {
         a.valor = true;
+        a.focus.classList.remove("inputIncorrecto");
+        
       }
     });
   } else {
     console.log("invalido");
-
+    
     formulario.forEach((a) => {
       if (a.name === "mensaje") {
         a.valor = false;
-        a.focus.focus();
+        a.focus.classList.add("inputIncorrecto");
+        
       }
     });
   }
@@ -201,27 +211,40 @@ document.querySelector("#mensajeF").addEventListener("blur", validarmensaje);
 
 //envio del form
 submit = () => {
-  if (
-    formulario.forEach((a) => {
-      if (!a.valor) {
+  let flag=true  
+  formulario.forEach((a) => {
+    if (!a.valor&&flag) {
         a.focus.focus();
-        return false;
         console.log(`no se envio falto completar ${a.name}`);
-      } else {
-        return true;
-      }
-    })
-  ) {
-    console.log(`envio exitoso`);
-    // realizar post
-    let formpost = {
-      name: document.querySelector("#nombreF").value,
-      email: document.querySelector("#mailF").value,
-      //"phone":document.querySelector("#phoneF").value
-      subject: document.querySelector("#selectF").value,
-      message: document.querySelector("mensajeF").value,
-    };
-    console.log(formpost);
-  }
+        flag=false;
+      } 
+    });
+    if(flag){
+      console.log(`envio exitoso`);
+      // realizar post
+      let formpost = {
+        "name": document.querySelector("#nombreF").value,
+        "email": document.querySelector("#mailF").value,
+        //"phone":document.querySelector("#phoneF").value
+        "subject": document.querySelector("#selectF").value,
+        "message": document.querySelector("#mensajeF").value,
+      };
+      console.log(formpost);
+      let url = "https://demo2420474.mockable.io/submitForm";
+
+fetch(url, {
+  method: 'POST', 
+  body: JSON.stringify(formpost), 
+  // headers:{
+  //   'Content-Type': 'application/json'
+  // }
+}).then(res => res.json())
+.catch(error => console.error('Error:', error))
+.then(response => console.log('Success:', response));
 };
-document.querySelector("#botonEnviar");
+};
+
+  
+  let form= document.querySelector("#formInterno");
+  form.addEventListener("submit", (e)=> e.preventDefault());
+  document.querySelector("#formInterno").addEventListener("submit",submit);
