@@ -376,3 +376,13 @@ input {
     width: 10px;
   }
 }
+
+/*estilo de letra tachado*/
+
+.tachado {
+  text-decoration: line-through;
+}
+
+.negrita {
+  font-weight: bold;
+}
