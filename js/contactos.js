@@ -103,7 +103,6 @@ function ocultarLogin() {
     document.getElementById("contenedorLogin").style.display = "none";
   }
 }
-//preventDefault 
 // validacion
 let formulario = [ //usaremos este objeto como tabla de comprovacion para saber si todos los campos fueron llenados de manera correcta
   //algo parecido al flag(bandera)
@@ -214,37 +213,43 @@ submit = () => {
   let flag=true  
   formulario.forEach((a) => {
     if (!a.valor&&flag) {
-        a.focus.focus();
-        console.log(`no se envio falto completar ${a.name}`);
-        flag=false;
-      } 
-    });
-    if(flag){
-      console.log(`envio exitoso`);
-      // realizar post
-      let formpost = {
-        "name": document.querySelector("#nombreF").value,
-        "email": document.querySelector("#mailF").value,
-        //"phone":document.querySelector("#phoneF").value
-        "subject": document.querySelector("#selectF").value,
-        "message": document.querySelector("#mensajeF").value,
-      };
-      console.log(formpost);
-      let url = "https://demo2420474.mockable.io/submitForm";
-
-fetch(url, {
-  method: 'POST', 
-  body: JSON.stringify(formpost), 
-  // headers:{
-  //   'Content-Type': 'application/json'
-  // }
-}).then(res => res.json())
-.catch(error => console.error('Error:', error))
-.then(response => console.log('Success:', response));
-};
-};
-
+      a.focus.focus();
+      console.log(`no se envio falto completar ${a.name}`);
+      flag=false;
+    } 
+  });
+  if(flag){
+    console.log(`envio exitoso`);
+    // realizar post
+    let formpost = {
+      "name": document.querySelector("#nombreF").value,
+      "email": document.querySelector("#mailF").value,
+      //"phone":document.querySelector("#phoneF").value
+      "subject": document.querySelector("#selectF").value,
+      "message": document.querySelector("#mensajeF").value,
+    };
+    console.log(formpost);
+    let url = "https://demo2420474.mockable.io/submitForm";
+    
+    fetch(url, {
+      method: 'POST', 
+      body: JSON.stringify(formpost), 
+      // headers:{
+        //   'Content-Type': 'application/json'
+        // }
+      }).then(res => res.json())
+      .catch(error => console.error('Error:', error))
+      .then(response => console.log('Success:', response));
+      formulario.forEach((a) => {
+        console.log("borrandocampos")
+        a.focus.value="";
+        a.valor=false;
+      });
+    };
+  };
   
+  
+  //preventDefault 
   let form= document.querySelector("#formInterno");
   form.addEventListener("submit", (e)=> e.preventDefault());
   document.querySelector("#formInterno").addEventListener("submit",submit);
