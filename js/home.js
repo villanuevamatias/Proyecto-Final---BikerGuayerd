@@ -38,8 +38,55 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+let flag=false;
+const validarmail = () => {
+  //Mail: Debe ser un mail válido.
+  let elemento = document.querySelector("#em").value;
+  
+  let regext = /@/;
+  
+      if (regext.test(elemento)&&(elemento.endsWith('.com')||(elemento.endsWith('.com.ar')))) {
+        
+      console.log("valido");
+      flag=true;
+      document.querySelector("#em").classList.remove("inputIncorrecto");
+     
+    } else {
+      console.log("invalido");
+      flag=false;
+      document.querySelector("#em").classList.add("inputIncorrecto");
+      document.querySelector("#em").focus();
+    }
+     } 
+     const validaruser = () => {
+       //Mail: Debe ser un mail válido.
+       let elemento = document.querySelector("#us").value;
+      
+       let regext = /[a-z]{3,16}/i;
+       console.log(elemento)
+       if (regext.test(elemento)) {
+         
+         console.log("valido");
+         flag=true;
+         document.querySelector("#us").classList.remove("inputIncorrecto");
+         
+        } else {
+        console.log("invalido");
+        flag=false;
+        document.querySelector("#us").classList.add("inputIncorrecto");
+        document.querySelector("#us").focus();
+      }
+    }
+    
 function store() {
-  /*Recibe los datos del imput*/
+    validaruser();
+    if(flag){
+      validarmail();
+    }else{return}
+
+    if(flag){
+      postlogin();
+    /*Recibe los datos del imput*/
   var inputUser = document.getElementById("us").value;
   var inputEmail = document.getElementById("em").value;
   var Novedades = document.getElementById("Novedades");
@@ -51,7 +98,7 @@ function store() {
   var correo = localStorage.getItem("Email");
   console.log(Novedades.checked);
   if (inputEmail === correo) {
-    //saludar(); //si existe el usuario saludar
+    
     sessionStorage.setItem("ocultarLogin", "si"); // esta variable temporaria nos servira para mostrar o los login de los demas site.
     ocultarLogin();
     if (Novedades.checked) {
@@ -79,6 +126,29 @@ function store() {
     // document.getElementById("em").value="";
   }
 }
+}
+//post Recolectar datos del usuario y enviar al servidor.*
+//objeto para el post*
+let postlogin=()=>{
+let url= "https://demo2420474.mockable.io/userData" ;
+let objeto={
+   token:"", name:"", email:"", sendEmail:false 
+}
+objeto.token=parseInt(Math.random()*100+1);
+objeto.name=document.getElementById("us").value;
+objeto.email=document.getElementById("em").value;
+ objeto.sendEmail=document.getElementById("Novedades").checked; 
+console.log(objeto);
+
+fetch(url, {  method: 'POST', 
+  body: JSON.stringify(objeto), 
+  // headers:{  /////NO ENTENDI PARA QUE ERA ESTA PARTE PERO COMO SI LO SACO NO HACE CAMBIO ALGUNO QUEDO COMENTADO//
+    //   'Content-Type': 'application/json'
+    // }
+  }).then(res => res.json())
+  .catch(error => console.error('Error:', error))
+  .then(response => console.log('POST Exitoso:', response));
+} 
 function mostrarhotsale() {
   document.getElementById("logohotsale").style.display = "flex";
 }

@@ -155,8 +155,8 @@ const validarmail = () => {
   let elemento = document.querySelector("#mailF").value;
   console.log("entromail");
   
-  let regext = /@/;
-  if (regext.test(elemento)) {
+  let regext = /@/ ;
+  if (regext.test(elemento)&&(elemento.endsWith('.com')||(elemento.endsWith('.com.ar')))) {
     console.log("valido");
     formulario.forEach((a) => {
       if (a.name === "mail") {
