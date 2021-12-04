@@ -38,9 +38,9 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
-let flag=false;
+let flag=false;//esta bandera se debera mantener en true dandonos el pase de las validaciones como exitosas
 const validarmail = () => {
-  //Mail: Debe ser un mail válido.
+  //Mail: Debe ser un mail válido incluyendo arroba y terminando tanto .com y .com.ar .
   let elemento = document.querySelector("#em").value;
   
   let regext = /@/;
@@ -48,17 +48,17 @@ const validarmail = () => {
       if (regext.test(elemento)&&(elemento.endsWith('.com')||(elemento.endsWith('.com.ar')))) {
         
       console.log("valido");
-      flag=true;
-      document.querySelector("#em").classList.remove("inputIncorrecto");
+      flag=true; //poner bandera en true dando entender que ya la primera validacion es correcta
+      document.querySelector("#em").classList.remove("inputIncorrecto");//quitar clase que resalte el imput incorrecto solo por si esta asiganda por errores anteriores
      
     } else {
       console.log("invalido");
-      flag=false;
-      document.querySelector("#em").classList.add("inputIncorrecto");
-      document.querySelector("#em").focus();
+      flag=false;//poner bandera en false dando a entender que a fallado en la validacion
+      document.querySelector("#em").classList.add("inputIncorrecto"); //asignar clase que resalte el imput incorrecto. 
+      document.querySelector("#em").focus(); //hacer focus en el imput incorrecto (posicionarnos en el campo incorrecto)
     }
      } 
-     const validaruser = () => {
+     const validaruser = () => { // todo  el funcionamiento de esta validacion es similar a la de validarmail
        //Mail: Debe ser un mail válido.
        let elemento = document.querySelector("#us").value;
       
@@ -78,13 +78,13 @@ const validarmail = () => {
       }
     }
     
-function store() {
-    validaruser();
-    if(flag){
+function store() { // funcion que validara los datos,guardara en localstorage, activara popup de descuento, y tambien realizar el post, todo siempre y cuando las validaciones sean correctas. 
+    validaruser();//primero valida user
+    if(flag){// si user valido bien, validarmail
       validarmail();
     }else{return}
 
-    if(flag){
+    if(flag){// ya para esta instancia se an validado ambos,  
       postlogin();
     /*Recibe los datos del imput*/
   var inputUser = document.getElementById("us").value;
@@ -131,9 +131,11 @@ function store() {
 //objeto para el post*
 let postlogin=()=>{
 let url= "https://demo2420474.mockable.io/userData" ;
+//se declara objeto que se posteara
 let objeto={
    token:"", name:"", email:"", sendEmail:false 
 }
+//se le asignan valores al objeto a postear
 objeto.token=parseInt(Math.random()*100+1);
 objeto.name=document.getElementById("us").value;
 objeto.email=document.getElementById("em").value;
@@ -149,6 +151,7 @@ fetch(url, {  method: 'POST',
   .catch(error => console.error('Error:', error))
   .then(response => console.log('POST Exitoso:', response));
 } 
+
 function mostrarhotsale() {
   document.getElementById("logohotsale").style.display = "flex";
 }
